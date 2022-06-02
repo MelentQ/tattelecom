@@ -1,0 +1,410 @@
+.tatt-banner {
+    height: 52.6rem;
+    margin-bottom: 7.7rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include for-fl-down {
+        height: 38rem;
+    }
+
+    @include for-xs-down {
+        height: 22rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.tatt-main-section {
+    &__heading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__heading-logo {
+        height: 5.9rem;
+        margin-bottom: 2rem;
+
+        @include for-lg-down {
+            height: 5rem;
+        }
+    }
+
+    &__heading {
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 130%;
+        letter-spacing: 0.015em;
+        margin-bottom: 6.4rem;
+
+        @include for-xs-down {
+            font-size: 2.6rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include for-md-down {
+            flex-wrap: wrap;
+            margin: -1.75rem;
+        }
+    }
+
+    &__item {
+        width: 16%;
+        height: 14.4rem;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include for-lg-down {
+            height: 13rem;
+        }
+
+        @include for-md-down {
+            width: calc(33.3% - 3.5rem);
+            margin: 1.75rem;
+
+            &:last-child {
+                margin: 1.75rem;
+            }
+        }
+
+        @include for-xs-down {
+            width: calc(50% - 3.5rem);
+        }
+    }
+
+    &__item-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        height: 100%;
+
+        &.mod-buisness {
+            &:hover {
+                color: var(--main-color-business);
+
+                .tatt-main-section__item-icon {
+                    fill: var(--main-color-business);
+                }
+            }
+        }
+    }
+
+    &__item-icon {
+        display: block;
+        fill: var(--main-grey-color);
+
+        @include for-lg-down {
+            width: 6rem;
+            height: 6rem;
+        }
+        
+    }
+
+    &__item-name {
+        display: inline-block;
+        margin-top: auto;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 160.5%;
+        text-align: center;
+        letter-spacing: 0.015em;
+
+        @include for-xs-down {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.tatt-row-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 3rem;
+}
+
+.tatt-row-grid__block {
+    &:nth-of-type(1) {
+        grid-column: 3 span;
+        @include for-lg-down {
+            grid-column: 12 span;
+        }
+    }
+
+    &:nth-of-type(2) {
+        grid-column: 9 span;
+        @include for-lg-down {
+            grid-column: 12 span;
+        }
+    }
+}
+
+.tatt-table-list {
+    &__item {
+        padding: 11px 0 18px;
+        border-bottom: 1px solid var(--border-color);
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        @include for-lg-down {
+            padding: 0;
+        }
+    }
+
+    &__item-link {
+        font-size: 1.6rem;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        transition: color 200ms;
+
+        &._is-active {
+            color: var(--main-color-business);
+        }
+
+        &:hover {
+            color: var(--main-color-business);
+        }
+
+        @include for-lg-down {
+            display: inline-block;
+            padding: 10px 0 18px;
+        }
+    }
+
+    &__lg-container {
+        @include for-lg-down {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @include for-lg-down {
+        background-color: #fff;
+        padding: 3rem 4.6rem;
+    }
+
+    &.mod-suppliers {
+        .tatt-table-list__item {
+            padding: 1.5rem 0;
+
+            &:nth-of-type(1) {
+                padding-top: 0.8rem;
+            }
+        }
+
+        .tatt-table-list__item-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+        }
+
+    }
+
+    &__submenu {
+        padding: 1.5rem 0 0 0;
+        &-item {
+            padding: 1.5rem 0;
+            padding-left: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+
+            &:first-child {
+                border-top: 1px solid var(--border-color);
+            }
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        &-link {
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            letter-spacing: 0.02em;
+            
+            &._is-current {
+                font-weight: 400;
+                color: var(--main-color-business);
+            }
+
+            &:hover {
+                &:not(.gl__no-default-hover) {
+                    color: var(--main-color-business);
+                }
+            }
+        }
+    }
+
+    &__submenu-drop-container {
+        &.mod-open {
+            .tatt-table-list__submenu {
+                // padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.tatt-select-wrap {
+    max-width: 12.7rem;
+    margin-bottom: 5rem;
+
+    .select__container.mod-simple-design .choices__inner {
+        padding: 1.5rem 1.8rem !important;
+        box-shadow: none;
+        background-color: var(--border-color) !important;
+    }
+    .select__container.mod-simple-design .choices__item--selectable {
+        font-size: 2rem;
+        line-height: 3.2rem;
+    }
+
+    .gl-input__title {
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 0.7rem;
+    }
+}
+
+.tatt-file-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 87%;
+    margin-bottom: 6rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    .dpf-file__file-link {
+        align-items: flex-start;
+        margin-top: 0;
+        margin-bottom: 4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .dpf-file__file-link-title {
+                color: var(--main-color);
+            }
+        }
+
+        @include for-lg-down {
+            margin-bottom: 3rem;
+        } 
+    }
+
+    .dpf-file__file-link-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        margin-right: 1.4rem;
+    }
+
+    .dpf-file__file-link-title {
+        line-height: 1.8rem;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        line-height: 160%;
+        margin-bottom: 2rem;
+        max-width: 83%;
+
+        @include for-lg-down {
+            max-width: 100%;
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    @include for-lg-down {
+        max-width: 100%;
+    }
+}
+
+.tatt-info-documents {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 3rem;
+    row-gap: 0;
+    margin-top: 7rem;
+
+    &__item {
+        grid-column: 4 span;
+        margin-bottom: 4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include for-xs-down {
+        margin-top: 4rem;
+
+        &__item {
+            grid-column: 9 span;
+        }
+    }
+}
+
+.tatt-section-news {
+    .gl__white-container {
+        border-radius: 5px;
+        box-shadow: none;
+        border: 1px solid #F5F5F5;
+        transition: box-shadow 200ms;
+
+        &:hover {
+            box-shadow: 0px -2px 6px rgba(218, 218, 218, 0.25), 0px 2px 4px rgba(218, 218, 218, 0.25), 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 19px rgba(51, 51, 51, 0.1);
+        }
+    }
+
+    .gl__link-show-all {
+        color: var(--main-text-color);
+    }
+
+    .gl__link-show-all-icon {
+        fill: var(--main-text-color);
+    }
+}
+
+.tatt-info-open-page {
+    h2 {
+        margin-bottom: 2.1rem;
+    }
+
+    .tatt-info-documents {
+        margin-top: 7.5rem;
+    }
+
+    .tatt-info-documents__item {
+        margin-bottom: 3.8rem;
+    }
+}
+
+.tatt-offset-bottom {
+    margin-bottom: 10rem !important;
+
+    @include for-md-down {
+        margin-bottom: 6rem !important;
+    }
+}

@@ -1,0 +1,27 @@
+<section class="bread-crumbs__container gl__sm-hide {{#if bred-b }}mod-b{{/if}} {{#if isTatt }}mod-tatt-bread-crumbs{{/if}} {{#if isOrangeBackground}}mod-orange{{/if}}" id="bread-crumbs-host">
+  <div class="gl__page-content">
+    <ul class="bread-crumbs__list">
+      {{#each bread-crumbs}}
+        <li class="bread-crumbs__item">
+          {{#if noLink}}
+            <span class="bread-crumbs__link">
+              {{ this.name }}
+            </span>
+          {{else}}
+            <a href="" class="bread-crumbs__link">
+              {{#if isTattNews}}
+                <svg width="20" height="8" aria-hidden="true" class="bread-crumbs__link-icon mod-tatt-news-link">
+                  <use xlink:href="#arrow-long-small"></use>
+                </svg>
+              {{/if}}
+              {{ this.name }}
+              <svg width="16" height="16" aria-hidden="true" class="bread-crumbs__link-icon">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

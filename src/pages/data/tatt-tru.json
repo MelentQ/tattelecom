@@ -1,0 +1,94 @@
+{
+    "isTattelekom": true,
+    "title": "Перечень ТРУ для МСП",
+    "script": "tatt-tru-page",
+    "bread-crumbs": [
+        {
+          "name": "Главная"
+        },
+        {
+          "name": "Партнерам"
+        },
+        {
+            "name": "Поставщикам"
+        },
+        {
+            "name": "Перечень ТРУ для МСП",
+            "noLink": true
+        }
+    ],
+    "tatt-table-list": [
+        {
+            "isSubmenu": true,
+            "link": "/tattelecom-1/tatt-suppliers.html",
+            "link-name": "Поставщикам",
+            "isDropOpen": true,
+            "submenu": [
+                {
+                    "submenu-link": "/tattelecom-1/tatt-purchases.html",
+                    "submenu-link-name": "Закупки"
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-msp.html",
+                    "submenu-link-name": "Информация для субьектов МСП"
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-tru.html",
+                    "submenu-link-name": "Перечень ТРУ для МСП ",
+                    "isCurrent": true
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-regulations.html",
+                    "submenu-link-name": "Нормативные документы"
+                }
+            ]
+        },
+        {
+            "link": "/tattelecom-1/tatt-telecom-operators.html",
+            "link-name": "Операторам связи"
+        },
+        {
+            "link": "/tattelecom-1/tatt-dealers.html",
+            "link-name": "Дилерам"
+        }
+    ],
+    "year-select": [
+        {
+          "selectTitle": "Год",
+          "name": "year-select",
+          "required": true,
+          "isSimpleDesign": true,
+          "isBorderBottom": false,
+          "options": [
+            "2020",
+            "2019"
+          ]
+        }
+    ],
+    "suppliers-archive-list": [
+        {
+            "archive-file": {
+                "name": "Перечень товаров, работ, услуг, закупки которых осуществляются у субъектов малого и среднего предпринимательства от 19.03.2020г.",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Перечень товаров, работ, услуг, закупки которых осуществляются у субъектов малого и среднего предпринимательства от 25.03.2020г.",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Перечень товаров, работ, услуг, закупки которых осуществляются у субъектов малого и среднего предпринимательства от 27.11.2020г.",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Перечень товаров, работ, услуг, закупки которых осуществляются у субъектов малого и среднего предпринимательства от 18.12.2020г.а",
+                "size": "Zip 2,97 МБ"
+            }
+        }
+    ]
+}  

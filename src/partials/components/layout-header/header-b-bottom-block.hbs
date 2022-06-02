@@ -1,0 +1,52 @@
+<div class="header__b-bottom-block">
+  <div class="gl__page-content header__bottom-block-content">
+    <div class="header__logo-wrapper">
+      <a href="/" class="header__logo-link">
+        <img src="img/header/logo-business.svg" alt="" class="header__logo mod-business">
+      </a>
+    </div>
+
+    <div class="header__bottom-block-right {{#if isBusinessMain }}{{ else }}mod-show{{/if}} mod-business gl__bg-hide js-b-menu-header header__hide-when-search js-hide-when-search">
+      <ul class="header__bottom-menu-list">
+        <li class="header__bottom-menu-item">
+          <a href="" class="header__bottom-menu-link mod-business" data-hover-value="business-solutions">
+            Комплексные решения для бизнеса
+          </a>
+        </li>
+        <li class="header__bottom-menu-item">
+          <a href="" class="header__bottom-menu-link mod-business" data-hover-value="connection">
+            Связь
+          </a>
+        </li>
+        <li class="header__bottom-menu-item">
+          <a href="" class="header__bottom-menu-link mod-business" data-hover-value="digital-services">
+            Цифровые сервисы
+          </a>
+        </li>
+        <li class="header__bottom-menu-item">
+          <a href="" class="header__bottom-menu-link mod-business" data-hover-value="promotion">
+            Продвижение
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    {{> layout-header/header-search }}
+
+    <div class="header__bottom-block-right header__hide-when-search js-hide-when-search">
+      <div class="header__btns-container">
+        <button type="button" class="header__bottom-btn header__btn-search js-open-search-btn gl__lg-hide">
+          <svg width="30" height="30" aria-hidden="true" class="header__btn-search-icon mod-business">
+            <use xlink:href="#search"></use>
+          </svg>
+        </button>
+
+        <button type="button" class="header__b-main-page-menu-btn gl__mx-hide">
+          Подобрать решение
+        </button>
+
+        <button type="button" class="header__bottom-btn header__btn-burger gl__bg-show mod-business js-open-side-bar"></button>
+      </div>
+    </div>
+  </div>
+</div>

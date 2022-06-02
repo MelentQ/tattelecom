@@ -1,0 +1,37 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> common/b-page-banner }}
+
+    {{> common/b-tariffs-list/section }}
+
+    {{> b-telephony-page/faq faq=faqServices }}
+
+    {{> b-telephony-page/b-services-links }}
+
+    {{> common/b-advantages-opportunities }}
+
+    <section class="b-info">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          Об услуге
+        </h2>
+
+        <p class="b-info__text">
+          Услуга местной телефонной связи с выделением в пользование номеров телефонной сети общего пользования.
+        </p>
+      </div>
+    </section>
+
+    {{> b-telephony-page/b-connection }}
+
+    {{> common/b-request-for-connection }}
+
+    {{> common/b-useful-articles }}
+
+    {{> common/faq/section-faq }}
+
+    {{> common/b-support }}
+
+  {{/content}}
+{{/extend}}

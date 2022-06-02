@@ -1,0 +1,44 @@
+<section class="product-features" id="product-features-host">
+  <div class="gl__page-content">
+    <div class="product-features__grid-wrapper">
+      <div class="product-features__img-wrapper">
+        <img src="img/product-page/tel.png" alt="" class="product-features__img">
+      </div>
+
+      <div class="product-features__title-wrapper">
+        <div class="product-features__article">Артикул:000000</div>
+        <h2 class="gl__title">Samsung Galaxy A51 (A515)</h2>
+      </div>
+
+      <div class="product-features__price">21 490р.</div>
+
+      <button type="button" class="gl__main-btn product-features-btn-main js-open-send-request-modal"
+              data-tariff-name="Оформление заказа"
+              data-product-img="img/product-page/tel.png"
+              data-product-caption="Смартфон"
+              data-product-value="Samsung Galaxy A51 (A515)"
+              data-product-price="21 490"
+              data-point-issue>
+        Заказать
+      </button>
+
+      <button type="button" class="product-features-btn-secondary js-open-installments-modal">
+        Доступно в рассрочку
+      </button>
+
+      <div class="product-features__list-wrapper">
+        <div class="product-features__list-caption">
+          Общие характеристики
+        </div>
+        <ul class="product-features__list">
+          {{#each product-features-list }}
+            <li class="product-features__item">
+              <div class="product-features__item-caption">{{ this.caption }}</div>
+              <div class="product-features__item-value">{{ this.value }}</div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

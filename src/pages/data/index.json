@@ -1,0 +1,186 @@
+{
+  "title": "Таттелеком",
+  "isPrivateClients": true,
+  "two-logos": true,
+  "script": "main-page",
+  "rates-preview": [
+    {
+      "pageName": "main-page",
+      "imgBackgroundDesk": "img/main-page/rates-preview/rates-preview-1.jpg",
+      "img": "img/main-page/rates-preview/rates-preview-2.jpg",
+      "ratesSecondName": "Тариф «Летай.Оранжевый»",
+      "ratesName": "Выжми скорость",
+      "ratesCaption": [
+        "Мощный интернет + ТВ 160 каналов"
+      ],
+      "link": {
+        "text": "Подробнее",
+        "url": "/rates-internet-item.html"
+      }
+    },
+    {
+      "pageName": "main-page",
+      "imgBackgroundDesk": "img/main-page/rates-preview/rates-preview-1.jpg",
+      "img": "img/main-page/rates-preview/rates-preview-2.jpg",
+      "ratesSecondName": "Тариф «Летай.Оранжевый»",
+      "ratesName": "Выжми скорость",
+      "ratesCaption": [
+        "Мощный интернет + ТВ 160 каналов"
+      ],
+      "link": {
+        "text": "Подробнее",
+        "url": "/rates-internet-item.html"
+      }
+    },
+    {
+      "pageName": "main-page",
+      "imgBackgroundDesk": "img/main-page/rates-preview/rates-preview-1.jpg",
+      "img": "img/main-page/rates-preview/rates-preview-2.jpg",
+      "ratesSecondName": "Тариф «Летай.Оранжевый»",
+      "ratesName": "Выжми скорость",
+      "ratesCaption": [
+        "Мощный интернет + ТВ 160 каналов"
+      ],
+      "link": {
+        "text": "Подробнее",
+        "url": "/rates-internet-item.html"
+      }
+    }
+  ],
+  "rates-list": [
+    {
+      "isHit": true,
+      "title": "Интернет + ТВ за 0 рублей",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "333"
+    },
+    {
+      "title": "Много интернета",
+      "subtitle": "Перейти по USSD *116*204#",
+      "unlimited": true,
+      "calls": [
+        "200 мин. звонки по РТ"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "240"
+    },
+    {
+      "title": "Много минут",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "350"
+    },
+    {
+      "title": "Много интернета",
+      "subtitle": "Перейти по USSD *116*204#",
+      "unlimited": true,
+      "calls": [
+        "200 мин. звонки по РТ"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "240"
+    },
+    {
+      "title": "Много минут",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "350"
+    }
+  ],
+  "services-menu-tabs": [
+    {
+      "items": [
+        {
+          "itemName": "Мобильная связь",
+          "value": "mobile",
+          "name": "services-adding-funds-account",
+          "isChecked": true
+        },
+        {
+          "itemName": "Интернет",
+          "value": "internet",
+          "name": "services-adding-funds-account"
+        },
+        {
+          "itemName": "Телевидение",
+          "value": "tv",
+          "name": "services-adding-funds-account"
+        }
+      ]
+    }
+  ],
+  "city-select": [
+    {
+      "name": "fly-top-block-city",
+      "selectTitle": "Укажите город проживания",
+      "isWhiteTitle": true,
+      "isSearch": true,
+      "iconSearchRight": true,
+      "required": true,
+      "placeholder": "город",
+      "options": [
+        "Казань",
+        "Чебоксары",
+        "Набережные Челны"
+      ]
+    }
+  ],
+  "news-list": {
+    "title": "Новости",
+    "list": [
+      {
+        "title": "22 май",
+        "text": "Провели праздник двора для жителей ЖК Салават Купере"
+      },
+      {
+        "title": "22 май",
+        "text": "Провели праздник двора для жителей ЖК Салават Купере"
+      },
+      {
+        "title": "22 май",
+        "text": "Провели праздник двора для жителей ЖК Салават Купере"
+      },
+      {
+        "title": "22 май",
+        "text": "Провели праздник двора для жителей ЖК Салават Купере"
+      },
+      {
+        "title": "22 май",
+        "text": "Провели праздник двора для жителей ЖК Салават Купере"
+      }
+    ]
+  },
+  "useful-information": [
+    {
+      "img": "img/main-page/useful-information/image-1.jpg",
+      "title": "Домофония"
+    },
+    {
+      "img": "img/main-page/useful-information/image-2.jpg",
+      "title": "Роуминг"
+    },
+    {
+      "img": "img/main-page/useful-information/image-3.jpg",
+      "title": "Приложения Таттелеком"
+    }
+  ]
+}

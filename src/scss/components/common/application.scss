@@ -1,0 +1,141 @@
+.application {
+  padding: 11rem 0;
+  position: relative;
+  background-color: var(--border-color);
+  z-index: 1;
+
+  @include for-sm-down {
+    padding: 3.4rem 0 5rem;
+  }
+}
+
+.application__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.application__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.application__title {
+  margin-bottom: 3.6rem;
+  text-align: center;
+
+  @include for-sm-down {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.application__subtitle {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+  color: var(--grey-text);
+  margin-bottom: 4.4rem;
+  max-width: 47rem;
+  text-align: center;
+
+  @include for-sm-down {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  &.mod-no-answer {
+    margin-bottom: 3rem;
+  }
+}
+
+.application__tel {
+  display: block;
+  font-size: 4.8rem;
+  line-height: 7rem;
+  margin-bottom: 3rem;
+
+  @include for-sm-down {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+.application__form {
+  &.mod-leave-request {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    max-width: 80rem;
+
+    @include for-sm-down {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem 1rem;
+    }
+
+    @include for-xs-down {
+      grid-template-columns: 1fr;
+      max-width: none;
+      width: 100%;
+      grid-gap: 2rem;
+    }
+  }
+
+  &.mod-no-answer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.2rem 1rem;
+    max-width: 63rem;
+
+    @include for-sm-down {
+      max-width: none;
+      width: 100%;
+    }
+
+    @include for-xs-down {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
+  }
+}
+
+.application__form-item {
+  &.mod-no-answer {
+    @include for-xs-up {
+      &:nth-child(3) {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}
+
+.application__btn-wrapper {
+  display: flex;
+
+  &.mod-no-answer {
+    @include for-xs-up {
+      grid-column: 2;
+      justify-content: flex-end;
+    }
+  }
+
+  @include for-sm-down {
+    grid-column: 1 / 3;
+    justify-content: center;
+  }
+
+  @include for-xs-down {
+    grid-column: auto;
+  }
+}
+
+.application__btn {
+  height: 100%;
+
+  @include for-xs-down {
+    width: 100%;
+  }
+}

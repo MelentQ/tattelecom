@@ -1,0 +1,58 @@
+<!--
+  ___Обязательные поля___
+  name - обязательно префикс - род.компонент (н-р services-tel)
+
+  ___Необязательные поля___
+  required (true/false) - обязательно для заполнения
+  caption - пояснение чекбокса справа
+  isChecked - нужен ли checked изначально
+  isModal - чекбокс для модалки
+  captionGreyDark - цвет подписи #A6A6A6 (--main-grey-color)
+  captionBlack - цвет подписи черный
+-->
+
+<label class="checkbox__wrapper">
+  <input type="checkbox"
+         class="checkbox {{#if isControl }}js-checkbox{{/if}}" name="{{ name }}"
+    {{#if required }}
+         data-parsley-required=""
+    {{/if}}
+    {{#if isChecked }}
+         checked
+    {{/if}}
+  >
+  <span class="checkbox__content
+    {{#if isModal}}
+      mod-modal
+    {{else if isFilter}}
+      mod-filter
+    {{else if businessMod}}
+      mod-business
+    {{else}}
+      mod-main
+    {{/if}}
+    
+    {{#if isModal}}
+    mod-business
+    {{/if}}">
+    
+
+    <svg width="16" height="16" aria-hidden="true" class="checkbox__content-icon">
+      <use xlink:href="#checkbox-checked"></use>
+    </svg>
+  </span>
+  <span class="checkbox__text
+    {{#if isModal}}
+      mod-modal
+    {{else if isFilter}}
+      mod-filter
+    {{else if captionGreyDark}}
+      mod-grey-dark
+    {{else if captionBlack}}
+      mod-black
+    {{else}}
+      mod-main
+    {{/if}}">
+    {{ caption }}
+  </span>
+</label>

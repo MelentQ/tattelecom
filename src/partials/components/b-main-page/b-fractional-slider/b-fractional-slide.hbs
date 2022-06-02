@@ -1,0 +1,19 @@
+<a href="" class="b-fractional-slider__slide-card gl__no-default-hover
+  {{ additionalClass }}
+  {{#if isLarge}}mod-large{{/if}}
+  {{#if isBig}}mod-big{{/if}}
+  {{#if isMiddleVertical}}mod-middle-vertical{{/if}}
+  {{#if isMiddleHorizontal}}mod-middle-horizontal{{/if}}
+  {{#if isSmall}}mod-small{{/if}}"
+>
+  {{#if this.img }}
+    <img src="{{ this.img }}" alt="" class="b-fractional-slider__card-background">
+  {{/if}}
+  <div class="b-fractional-slider__card-title">
+    {{{ this.title }}}
+  </div>
+
+  <div class="b-fractional-slider__card-subtitle">
+    {{{ this.subtitle-down }}}
+  </div>
+</a>

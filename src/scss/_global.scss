@@ -1,0 +1,461 @@
+body {
+  color: var(--main-text-color);
+
+  &.mod-no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+.gl__page-content {
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
+  max-width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gl__section {
+  padding: 5rem 0;
+
+  @include for-lg-down {
+    padding: 3rem 0;
+  }
+
+  @include for-sm-down {
+    padding: 2.6rem 0;
+  }
+}
+
+.tattelekom-pages {
+  .gl__page-content {
+    max-width: 1450px;
+  }
+
+  .gl__layout-content {
+    margin-top: var(--header-height-tatt);
+  }
+}
+
+.gl__layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  &.mod-business {
+    background: var(--border-color);
+
+    a {
+      &:not(.gl__no-default-hover) {
+        &:hover {
+          color: var(--main-color-business);
+
+          svg {
+            fill: var(--main-color-business);
+          }
+        }
+      }
+    }
+
+    button {
+      &:not(.gl__no-default-hover) {
+        &:hover {
+          svg {
+            fill: var(--main-color-business);
+          }
+        }
+      }
+    }
+
+    textarea {
+      @extend %scroll;
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--main-color-business);
+      }
+    }
+
+    ::selection {
+      @extend %select-business-background;
+    }
+
+    .select__container {
+      .choices__list {
+        @extend %scroll-business;
+      }
+    }
+
+    .faq__item-btn-wrapper, .faq__item-btn-hover {
+      &:hover {
+        color: var(--main-color-business);
+      }
+    }
+
+    .faq__item {
+      &:not(.mod-no-border) {
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    .info-drop-menu__title {
+      &:hover, &.mod-open {
+        color: var(--main-color-business);
+
+        .info-drop-menu__title-icon {
+          fill: var(--main-color-business) !important;
+        }
+      }
+    }
+
+    .gl__text {
+      a {
+        color: var(--main-color-business);
+
+        &:hover {
+          color: var(--main-color-business-hover) !important;
+        }
+      }
+    }
+
+    .gl__layout-content {
+      margin-top: var(--header-height-b);
+    }
+
+    .suggestions-suggestions {
+      color: var(--main-text-color);
+    }
+  }
+}
+
+.gl__layout-content {
+  flex: 1 1 100%;
+  margin-top: var(--header-height);
+}
+
+.gl__title-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  .gl__title {
+    margin-bottom: 0;
+  }
+
+  @include for-sm-down {
+    margin-bottom: 2.6rem;
+  }
+}
+
+.gl__nowrap {
+  white-space: nowrap;
+}
+
+.gl__title {
+  font-size: 3.8rem;
+  line-height: 5rem;
+  letter-spacing: 0.015em;
+  color: var(--main-text-color);
+  margin-bottom: 5rem;
+  font-weight: normal;
+
+  @include for-sm-down {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &.mod-white {
+    color: #fff;
+  }
+}
+
+.gl__white-container {
+  box-shadow: 0 0 12px 4px #0000000f;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gl__drop-menu-btn {
+  &.mod-open {
+    .gl__drop-menu-icon {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.gl__drop-menu-btn-content {
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+
+.gl__drop-menu-icon {
+  transform: rotate(0);
+  transition: transform 250ms;
+}
+
+.gl__drop-menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms;
+
+  &.mod-open {
+    //max-height: ??; // высчитывается через js
+    pointer-events: auto;
+  }
+
+  &:not(.mod-open) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.gl__drop-menu {
+  padding-bottom: 2rem;
+}
+
+.gl__menu-tab-content {
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+
+.gl__filter-container {
+  @include for-bg-down {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: 400ms opacity;
+    background-color: rgba(0, 0, 0, .4);
+    pointer-events: none;
+
+    &.mod-show {
+      opacity: 1;
+      z-index: var(--z-index-header);
+      pointer-events: auto;
+    }
+  }
+
+  &--lg {
+    @include for-lg-down {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      transition: 400ms opacity;
+      background-color: rgba(0, 0, 0, .4);
+      pointer-events: none;
+
+      &.mod-show {
+        opacity: 1;
+        z-index: var(--z-index-header);
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.gl__filter {
+  @include for-bg-down {
+    width: auto !important;
+    margin: 1rem var(--page-content-padding);
+    padding-top: 8rem !important;
+    position: relative;
+    max-height: calc(100vh - 1rem);
+    overflow: auto;
+    border-radius: 10px;
+  }
+
+  &--lg {
+    @include for-lg-down {
+      width: auto !important;
+      margin: 1rem var(--page-content-padding);
+      padding-top: 8rem !important;
+      position: relative;
+      max-height: calc(100vh - 1rem);
+      overflow: auto;
+      border-radius: 10px;
+    }
+  }
+}
+
+.gl__filter-modal-close {
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 7rem !important;
+  width: 7rem !important;
+}
+
+.gl__b-hint-nds {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+  color: var(--main-grey-color);
+  padding-top: 1.8rem;
+
+  &:not(.mod-no-line) {
+    border-top: 1px solid #fff;
+  }
+}
+
+.gl__text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    letter-spacing: 0.015em;
+    margin: 5rem 0 2.4rem;
+    font-weight: normal;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.015em;
+    font-weight: normal;
+    margin: 2.5rem 0 2.4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  ul, ol {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: .6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        top: .8rem;
+        left: 0;
+        border-radius: 100%;
+        background-color: var(--main-text-color);
+      }
+    }
+  }
+
+  ol {
+    li {
+      counter-increment: num;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: counter(num) '.';
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  a {
+    color: var(--main-color);
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--main-color-hover) ;
+    }
+  }
+}
+
+.gl__visually-hidden {
+  position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	clip: rect(0 0 0 0) !important;
+}
+
+.gl__pointer-events-auto {
+  pointer-events: auto !important;
+}
+
+.tattelekom-pages .gl__layout-content {
+  margin-top: calc(4rem + var(--header-height-tatt));
+}
+@media screen and (max-width: 767px) {
+  .tattelekom-pages .gl__layout-content {
+      margin-top: var(--header-height-tatt);
+  }
+}
+
+.tattelekom-pages .tatt-achievements__link {
+  display: block;
+  margin-top: 4rem;
+}
+
+.tattelekom-pages .tatt-achievements__link:first-of-type {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 559px) {
+  .tattelekom-pages .tatt-achievements__link {
+      margin-top: 3rem;
+  }
+}
+
+.tattelekom-pages main > section.bread-crumbs__container {
+  max-width: 1450px;
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
+}

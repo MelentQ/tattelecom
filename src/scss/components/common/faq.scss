@@ -1,0 +1,260 @@
+.faq {
+  padding: 5rem 0;
+  overflow: hidden;
+
+  @include for-sm-down {
+    padding: 2.6rem 0;
+  }
+}
+
+.faq__title-wrapper {
+  justify-content: flex-start;
+  cursor: pointer;
+
+  &:hover {
+    .faq__title {
+      color: var(--main-color-business);
+    }
+
+    .faq__item-btn-icon {
+      fill: var(--main-color-business);
+      height: 3.2rem;
+    }
+  }
+}
+
+.faq__title {
+  transition: color 250ms;
+}
+
+.faq__small-title {
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 4rem;
+  font-weight: normal
+}
+
+
+.faq__item {
+  &:not(.mod-no-border) {
+    border-bottom: 2px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
+
+.faq__list-wrapper {
+  &.mod-small-menu-items {
+    .faq__item-btn-wrapper {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      letter-spacing: 0.015em;
+    }
+  }
+
+  &.mod-small {
+    max-width: 89.6rem;
+  }
+
+  + .gl__b-hint-nds {
+    border-top: none;
+  }
+}
+
+.faq__item-btn-wrapper {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  padding: 2rem 0;
+  font-weight: 700;
+  text-align: start;
+  width: 100%;
+
+  &.mod-single-question {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+
+    .faq__item-btn-icon {
+      height: 3.2rem;
+    }
+  }
+}
+
+.faq__item-btn {
+  margin-bottom: 0;
+  padding: 2rem 0;
+}
+
+.faq__item-btn-hover {
+  transition: color 250ms;
+
+  &:hover {
+    color: var(--main-color);
+  }
+}
+
+.faq__item-content-wrapper {
+  margin-left: 4.2rem;
+  padding-bottom: 2rem;
+
+  &.mod-big-margin {
+    margin-left: 16.8rem;
+
+    @include for-bg-down {
+      margin-left: 6rem;
+    }
+
+    @include for-sm-down {
+      margin-left: 0;
+    }
+  }
+}
+
+.faq__item-btn-icon {
+  fill: var(--main-text-color);
+  margin-right: 1.8rem;
+  height: 2.4rem;
+  flex: 0 0 2.4rem;
+}
+
+.faq__item-content-text {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.faq__link-show-all {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  padding: 2rem 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: 2.2rem;
+}
+
+.faq__link-show-all-icon {
+  fill: var(--main-text-color);
+  height: 2.4rem;
+  padding-top: .4rem;
+}
+
+.faq__flexs-list {
+  margin-left: 10.4rem;
+
+  @include for-sm-down {
+    margin-left: 3rem;
+  }
+
+  @include for-xs-down {
+    margin-left: 0;
+  }
+
+  .info-drop-menu__flex {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.faq__flexs-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+
+  & + & {
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+.faq__flexs-item-caption {
+  font-weight: 300;
+}
+
+.faq__flexs-item-value {
+  font-weight: 700;
+}
+
+.faq__services-wrapper {
+  max-width: 87rem;
+}
+
+.faq__services-item {
+  display: grid;
+  grid-template-columns: 14fr 2fr;
+  grid-gap: 2rem;
+  padding: 2.2rem 0;
+
+  & + & {
+    border-top: 1px solid #fff;
+  }
+}
+
+.faq__services-caption {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  color: var(--grey-text);
+}
+
+.faq__services-value {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  text-align: end;
+}
+
+.faq__download-link {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  padding: 2rem;
+  margin: -2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  & + & {
+    margin-top: .4rem;
+  }
+
+  &:first-of-type {
+    margin-top: 4.4rem;
+  }
+}
+
+.faq__download-link-icon {
+  height: 2.4rem;
+  margin-right: 2rem;
+  fill: var(--main-text-color);
+  flex: 0 0 2.4rem;
+}
+
+.faq__download-link-name {
+  color: var(--main-color-business);
+  margin-right: 1rem;
+
+  @include for-sm-down {
+    margin-right: .2rem;
+  }
+}

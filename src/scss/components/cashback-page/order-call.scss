@@ -1,0 +1,167 @@
+.order-call {
+  ::selection {
+    @extend %select-white-background;
+  }
+
+  &.mod-giv-month-section {
+    margin-bottom: 3rem;
+
+    @include for-sm-up {
+      margin-top: 10rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .order-call__content-wrapper {
+      @include for-xs-down {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    .order-call__content {
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+
+      @include for-xs-down {
+        height: 42rem;
+        display: block;
+      }
+    }
+  }
+
+  &.mod-absolute-img {
+    .order-call__img {
+      position: absolute;
+      bottom: 0;
+      right: 7rem;
+      height: 48rem;
+      margin-bottom: 0;
+      z-index: -1;
+  
+      @include for-mx-down {
+        right: 0;
+      }
+  
+      @include for-sm-down {
+        height: 27.6rem;
+      }
+    }
+  }
+
+}
+
+.order-call__b-connect {
+  @include for-sm-up {
+    .order-call__content {
+      padding: 6rem 8.8rem;
+    }
+
+    .order-call__title {
+      font-size: 38px;
+      line-height: 49px;
+      letter-spacing: 0.015em;
+      max-width: 80%;
+
+      @include for-bg-down {
+        max-width: 70%;
+      }
+    }
+
+    .order-call__text {
+      max-width: 68%;
+    }
+  }
+}
+
+.order-call-page-content {
+  @include for-sm-down {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.order-call__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  background: linear-gradient(99.54deg, #FA7007 3.54%, #FA4907 73.5%);
+  border-radius: 10px;
+  padding: 8.2rem 4rem 4.2rem 18.2rem;
+  color: #fff;
+
+  &.mod-absolute-image-desk {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.mod-grey {
+    background: #EAEBEB;
+    color: var(--main-text-color);
+  }
+
+  @include for-lg-down {
+    padding: 6.2rem 2rem;
+  }
+
+  @include for-sm-down {
+    flex-direction: column-reverse;
+    padding: 2rem;
+  }
+}
+
+.order-call__content-wrapper {
+  max-width: 60%;
+  width: 100%;
+
+  @include for-xs-down {
+    max-width: none;
+  }
+}
+
+.order-call__text {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 5.4rem;
+
+  @include for-sm-down {
+    margin-bottom: 4rem;
+  }
+
+  &.nod-give-month {
+    @include for-xs-down {
+      max-width: 70%;
+    }
+  }
+}
+
+.order-call__img {
+  margin-left: 4rem;
+  height: 39rem;
+  object-fit: contain;
+
+  &.mod-absolute-desk {
+    @include for-sm-up {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  @include for-md-down {
+    height: 30rem;
+  }
+
+  @include for-sm-down {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    height: 24rem;
+  }
+}

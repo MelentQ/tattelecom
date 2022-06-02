@@ -1,0 +1,18 @@
+<section class="b-advantages-list gl__section">
+  <div class="gl__page-content">
+    {{#if customTitle }}
+      <h2 class="gl__title">{{ customTitle }}</h2>
+    {{else}}
+      <h2 class="gl__title">Преимущества</h2>
+    {{/if}}
+
+    <ul class="b-advantages-list__list">
+      {{#each advantagesList }}
+        <li class="b-advantages-list__item">
+          <img src="{{ this.img }}" alt="" class="b-advantages-list__item-icon">
+          <div class="b-advantages-list__item-caption">{{ this.caption }}</div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

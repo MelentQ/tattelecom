@@ -1,0 +1,15 @@
+<div class="pagination-page__pages-main-container {{#if isBusiness }}mod-b{{/if}}">
+  <a href="/" class="pagination-page__pages-btn pagination-page__btn-nav mod-prev">
+    <span class="pagination-page__btn-nav-content"></span>
+  </a>
+  <div class="pagination-page__pages-wrapper">
+    {{#each pageNumbers }}
+      <a href="/" class="pagination-page__pages-item {{#if isChecked }}_is-current{{/if}} {{#if isEmpty }}_is-empty{{/if}}">
+        <span class="pagination-page__pages-btn pagination-page__pages-radio-content">{{ this.pageNum }}</span>
+      </a>
+    {{/each}}
+  </div>
+  <a href="/" class="pagination-page__pages-btn pagination-page__btn-nav mod-next">
+    <span class="pagination-page__btn-nav-content"></span>
+  </a>
+</div>

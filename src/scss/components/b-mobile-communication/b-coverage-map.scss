@@ -1,0 +1,10 @@
+.b-coverage-map {
+  &__content {
+    width: 100%;
+    height: 68.1rem;
+
+    @include for-fl-down {
+      height: 48.1rem;
+    }
+  }
+}

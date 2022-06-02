@@ -1,0 +1,108 @@
+{
+  "title": "Оплата услуг",
+  "isPrivateClients": true,
+  "script": "payment-services-page",
+  "bread-crumbs": [
+    {
+      "name": "Частным клиентам"
+    },
+    {
+      "name": "Оплата услуг",
+      "noLink": true
+    }
+  ],
+  "payment-services": [
+    {
+      "warning": "Такого номера телефона нет в базе",
+      "typeModal": "mobile",
+      "title": "С банковской карты, Apple Pay или Google Pay",
+      "subtitle": "Мгновенное зачисление денег на счёт телефона без комиссий",
+      "inputsList": [
+        {
+          "name": "payment-tel",
+          "title": "Пополняемый номер",
+          "isTel": true
+        },
+        {
+          "title": "От 10 до 30 000 Р",
+          "isSum": true
+        },
+        {
+          "isEmail": true,
+          "title": "Электронная почта"
+        }
+      ],
+      "isCards": true
+    },
+    {
+      "warning": "Такого лицевого счета не существует",
+      "typeModal": "personal-account",
+      "title": "По Номеру лицевого счета",
+      "subtitle": "Сумма платежа будет доступна уже сейчас, а пополнить баланс можно будет позже",
+      "inputsList": [
+        {
+          "title": "Введите номер, чтобы выбрать сумму",
+          "isAccountNumber": true
+        },
+        {
+          "isEmail": true,
+          "title": "Электронная почта"
+        }
+      ]
+    },
+    {
+      "title": "Обещанный платеж",
+      "subtitle": "Если ваш баланс близок к нулю, а возможности пополнить счет в данный момент нет, воспользуйтесь «Обещанным платежом».",
+      "inputsList": [
+        {
+          "title": "Введите номер, чтобы выбрать сумму"
+        }
+      ]
+    },
+    {
+      "title": "Подключите автоплатёж",
+      "subtitle": "Счет будет автоматически пополняться с банковской карты на заданную сумму, при достижении определенного остатка на балансе.",
+      "inputsList": [
+        {
+          "title": "Введите номер, чтобы выбрать сумму"
+        }
+      ]
+    }
+  ],
+  "payment-menu-tabs": [
+    {
+      "items": [
+        {
+          "itemName": "Мобильная связь",
+          "value": "mobile",
+          "name": "payment-tab",
+          "isChecked": true
+        },
+        {
+          "itemName": "По номеру лицевого счета",
+          "value": "personal-account",
+          "name": "payment-tab"
+        },
+        {
+          "itemName": "Стационарный телефон",
+          "value": "landline-phone",
+          "name": "payment-tab"
+        }
+      ]
+    }
+  ],
+  "pay-other-select": [
+    {
+      "isPayOther": true,
+      "name": "pay-other",
+      "placeholder": "другое",
+      "options": [
+        "Сбербанк онлайн",
+        "ЮMoney",
+        "Альфа-Клик",
+        "QIWI Кошелёк",
+        "Webmoney"
+      ]
+    }
+  ]
+}

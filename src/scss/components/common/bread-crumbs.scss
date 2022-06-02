@@ -1,0 +1,90 @@
+.bread-crumbs__container {
+  background-color: #FCFCFC;
+
+  &.mod-orange {
+    ::selection {
+      @extend %select-white-background;
+    }
+
+    background-color: var(--main-color);
+
+    .bread-crumbs__link {
+      color: #fff;
+    }
+
+    a.bread-crumbs__link {
+      &:hover {
+        color: var(--main-text-color);
+
+        .bread-crumbs__link-icon {
+          fill: var(--main-text-color);
+        }
+      }
+    }
+
+    .bread-crumbs__link-icon {
+      fill: #fff;
+    }
+  }
+
+  &.mod-tatt-bread-crumbs {
+    background-color: #fff;
+    margin-bottom: 4.5rem;
+
+    .bread-crumbs__link {
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      padding: 0;
+    }
+
+    .bread-crumbs__list {
+      margin: 0;
+      padding: 0;
+      padding-top: 3.1rem;
+    }
+  }
+
+  &.mod-b {
+    background-color: #F5F5F5;
+  }
+}
+
+.bread-crumbs__list {
+  margin-left: -.6rem;
+  padding: 1.2rem 0;
+}
+
+.bread-crumbs__item {
+  display: inline-block;
+
+  &:last-child {
+    .bread-crumbs__link-icon {
+      display: none;
+    }
+
+    .mod-tatt-news-link {
+      display: block;
+      transform: scale(-1, 1);
+      margin-right: 1rem;
+      margin-left: 0;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.bread-crumbs__link {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.02em;
+  color: var(--grey-text);
+  padding: .6rem;
+}
+
+.bread-crumbs__link-icon {
+  height: 1.6rem;
+  fill: var(--grey-text);
+  margin-left: 1rem;
+}

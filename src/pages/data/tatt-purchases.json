@@ -1,0 +1,84 @@
+{
+    "isTattelekom": true,
+    "title": "Закупки",
+    "script": "tatt-purchases-page",
+    "bread-crumbs": [
+        {
+          "name": "Главная"
+        },
+        {
+          "name": "Партнерам"
+        },
+        {
+            "name": "Поставщикам"
+        },
+        {
+            "name": "Закупки",
+            "noLink": true
+        }
+    ],
+    "tatt-table-list": [
+        {
+            "isSubmenu": true,
+            "isDropOpen": true,
+            "link": "/tattelecom-1/tatt-suppliers.html",
+            "link-name": "Поставщикам",
+            "submenu": [
+                {
+                    "submenu-link": "/tattelecom-1/tatt-purchases.html",
+                    "submenu-link-name": "Закупки",
+                    "isCurrent": true
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-msp.html",
+                    "submenu-link-name": "Информация для субьектов МСП"
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-tru.html",
+                    "submenu-link-name": "Перечень ТРУ для МСП "
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-regulations.html",
+                    "submenu-link-name": "Нормативные документы"
+                }
+            ]
+        },
+        {
+            "link": "/tattelecom-1/tatt-telecom-operators.html",
+            "link-name": "Операторам связи"
+        },
+        {
+            "link": "/tattelecom-1/tatt-dealers.html",
+            "link-name": "Дилерам"
+        }
+    ],
+    "year-select": [
+        {
+          "selectTitle": "Год",
+          "name": "year-select",
+          "required": true,
+          "isSimpleDesign": true,
+          "isBorderBottom": false,
+          "options": [
+            "2020",
+            "2019"
+          ]
+        }
+    ],
+    "suppliers-dropdown-list": [
+        {
+            "date": "20.02.2020",
+            "archive-file": {
+                "name": "Открытие кредитной линии",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "date": "07.05.2020",
+            "archive-file": {
+                "name": "СП-152: Предоставление кредит",
+                "size": "Zip 2,97 МБ"
+            }
+        }
+    ]
+}  

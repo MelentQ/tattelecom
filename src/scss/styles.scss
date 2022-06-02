@@ -1,0 +1,225 @@
+@import 'sizes';
+@import 'consts';
+@import 'controls';
+@import 'fontface';
+@import 'reset';
+@import 'global';
+@import 'vendor';
+@import 'extends';
+@import 'dev';
+
+@import 'components/common/controls/menu-tabs';
+@import 'components/common/controls/checkbox';
+@import 'components/common/controls/input-main';
+@import 'components/common/controls/select';
+@import 'components/common/controls/filter-controls';
+@import 'components/common/controls/toggle';
+@import 'components/common/controls/radio';
+@import 'components/common/controls/card-pay';
+@import 'components/common/controls/input-search';
+
+@import 'components/common/bread-crumbs';
+@import 'components/common/slider';
+@import 'components/common/instructions';
+@import 'components/common/rates-preview';
+@import 'components/common/rates-list';
+@import 'components/common/services';
+@import 'components/common/useful-information';
+@import 'components/common/application';
+@import 'components/common/faq';
+@import 'components/common/pagination-page';
+@import 'components/common/product-item';
+@import 'components/common/documents-list';
+@import 'components/common/rates-info';
+@import 'components/common/btn-info';
+@import 'components/common/intro-cards-container';
+@import 'components/common/service-card-with-photo';
+@import 'components/common/pdf-file';
+@import 'components/common/archive-file';
+@import 'components/common/info-drop-menu';
+@import 'components/common/support-input';
+
+@import 'components/layout/header';
+@import 'components/layout/side-bar';
+@import 'components/layout/footer';
+
+@import 'components/layout/modals/modal';
+@import 'components/layout/modals/modal-callback';
+@import 'components/layout/modals/modal-thanks';
+@import 'components/layout/modals/send-request';
+@import 'components/layout/modals/about-tariff';
+@import 'components/layout/modals/modal-installments';
+@import 'components/layout/modals/top-up-account';
+
+@import 'components/main-page/news-list';
+
+@import 'components/mobile-communication-page/cashback';
+
+@import 'components/cashback-page/what-is';
+@import 'components/cashback-page/how-receive';
+@import 'components/cashback-page/order-call';
+
+@import 'components/together-profitable-page/how-works';
+@import 'components/together-profitable-page/steps';
+
+@import 'components/roaming-page/roaming';
+@import 'components/roaming-page/top-block';
+@import 'components/roaming-page/roaming-tabs';
+@import 'components/roaming-page/pricing-plans';
+@import 'components/roaming-page/international-calls';
+@import 'components/roaming-page/roaming-without-worries';
+@import 'components/roaming-page/connection-options';
+
+@import 'components/ussd-requests-page/ussd-faq';
+
+@import 'components/fly-old-number-page/fly-top-block';
+
+@import 'components/beautiful-phone-page/phone-list';
+
+@import 'components/applications-page/applications-list';
+
+@import 'components/tv-online-page/tv-online';
+
+@import 'components/child-nearby-page/child-nearby';
+
+@import 'components/4g-services-page/catalog';
+
+@import 'components/product-page/product-features';
+@import 'components/product-page/recommend';
+
+@import 'components/rates-list-page/rates-mobile-list';
+@import 'components/rates-list-page/info-links';
+
+@import 'components/instructions/instructions';
+@import 'components/instructions/errors-list';
+
+@import 'components/rates-internet-item-page/rates-internet-application';
+
+@import 'components/documents/documents';
+
+@import 'components/third-parties/third-parties';
+@import 'components/third-parties/numbered-list';
+
+@import 'components/support-page/support';
+
+@import 'components/promo-internet-page/promo-internet-info';
+@import 'components/promo-internet-page/promo-internet-advantages';
+@import 'components/promo-internet-page/promo-internet-connect';
+
+@import 'components/promo-gpon-page/gpon-rates-list';
+@import 'components/promo-gpon-page/gpon-description';
+@import 'components/promo-gpon-page/gpon-application';
+@import 'components/promo-gpon-page/gpon-map';
+
+@import 'components/promo-intercom-page/intercom-advantages';
+@import 'components/promo-intercom-page/intercom-functions';
+
+@import 'components/promo-convergent-page/convergent-enabled';
+@import 'components/promo-convergent-page/convergent-you-get';
+
+@import 'components/error-page/error';
+
+@import 'components/payment-services-page/payment-services';
+
+@import 'components/search-site-page/search-site';
+
+@import 'components/questions/questions';
+@import 'components/questions/questions-content';
+@import 'components/questions/question-content';
+
+@import 'components/technical-works-page/technical-works';
+
+@import 'components/sales-offices-page/sales-offices-map';
+
+@import 'components/news-page/news-page';
+
+@import 'components/include-page/include-page';
+
+
+// business
+
+@import 'components/common/b-support';
+@import 'components/common/b-socials';
+@import 'components/common/b-page-banner';
+@import 'components/common/b-tariffs-list';
+@import 'components/common/b-request-for-connection';
+@import 'components/common/b-additional-services';
+@import 'components/common/b-steps';
+@import 'components/common/b-services';
+@import 'components/common/b-advantages-opportunities';
+@import 'components/common/b-check-items';
+@import 'components/common/b-info';
+@import 'components/common/b-bnt-back';
+@import 'components/common/b-advantages-list';
+
+@import 'components/common/controls/b-menu-tabs';
+
+@import 'components/b-mobile-communication/b-coverage-map';
+@import 'components/common/b-promotions';
+@import 'components/b-mobile-communication/b-useful-articles';
+
+@import 'components/b-main-page/b-main-page';
+@import 'components/b-main-page/b-fractional-slider';
+@import 'components/b-main-page/b-low-slider';
+@import 'components/b-main-page/b-high-slider';
+@import 'components/b-main-page/b-normal-slider';
+
+@import 'components/b-roaming-international/b-roaming-international-intro';
+@import 'components/b-roaming-international/b-roaming-international-options';
+
+@import 'components/b-connect-page/b-connect-list';
+
+@import 'components/b-telephony/b-services-links';
+@import 'components/b-telephony/b-connection';
+
+@import 'components/b-ip-telephony-page/b-codes-for-calls';
+
+@import 'components/b-sip-telephony-page/b-sip-telephony-rates';
+
+@import 'components/b-sip-trunk-page/b-city-rates';
+@import 'components/b-sip-trunk-page/b-scheme-work';
+
+@import 'components/b-video-analytics/b-discounts';
+@import 'components/b-tariffs/b-tariffs';
+
+// tattlelkom
+@import 'components/tattelekom-main/tattelekom-main';
+@import 'components/tattelekom-main/popullar-link';
+@import 'components/tattelekom-main/popular-sections';
+@import 'components/tattelekom-main/private-clients';
+@import 'components/tattelekom-main/buisness-clients';
+@import 'components/tatt-investors-page/investors-page';
+@import 'components/tatt-suppliers/tatt-suppliers';
+@import 'components/tatt-dealers/tatt-dealers';
+@import 'components/tatt-about-company/tatt-about-company';
+@import 'components/tatt-achievements/tatt-achievements';
+@import 'components/tatt-head/tatt-head';
+@import 'components/tatt-structural/tatt-structural';
+@import 'components/tatt-branch/tatt-branch';
+@import 'components/tatt-news/tatt-news';
+@import 'components/tatt-contacts-info/tatt-contacts-info';
+@import 'components/tatt-sales-offices/sales-offices';
+
+@import 'components/b-telephone-services-page/b-telephone-services-links';
+@import 'components/b-telephone-services-page/b-telephone-info';
+
+@import 'components/b-internet/b-advantages';
+
+@import 'components/b-internet-for-office-page/b-connection';
+
+@import 'components/b-internet-wi-fi-page/b-internet-wi-fi-opportunities';
+
+@import 'components/b-internet-by-radio-page/b-your-benefit';
+
+@import 'components/b-lorawan/b-over-package';
+@import 'components/b-lorawan/b-lorawan-scheme';
+
+@import 'components/b-colocation/b-colocation-rates';
+
+@import 'components/b-ddos-protection-page/b-ddos-protection-info';
+
+@import 'components/b-abb-services-page/b-abb-services-banner';
+
+@import 'components/b-support-corporate-page/b-popular-categories';
+
+@import 'components/b-support-item/b-support-item';

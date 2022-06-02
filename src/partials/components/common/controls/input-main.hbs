@@ -1,0 +1,70 @@
+<!--
+  ___Обязательные поля___
+  type - html-тип инута
+  name - обязательно префикс - род.компонент (н-р services-tel)
+  placeholder
+
+  ___Необязательные поля___
+  required (true/false) - обязательно для заполнения
+  inputTitle - заголовок НАД инпутом
+  phoneMask (true/false) - маска для телефона
+  rubMask (true/false) - маска для ₽ в конце
+  minLength - деф-2
+  maxLength - деф-none
+  minNumber - минимальное число
+  maxNumber - максимальное число
+  id - обычный id, например для первого пароля
+  parsleyEqualto - для повторного пароля, проверяет совпадение с предыдущим (у которого указали id)
+  parsleyType - для валидации (н-р email)
+  isSimpleDesign - упрощенный дизайн
+  numberNoArrows - (true / false) - убрать стрелочки с number
+-->
+
+<label class="gl-input__wrapper js-input-{{ type }}">
+  {{#if inputTitle}}
+    <span class="gl-input__title {{#if isWhiteTitle}}mod-white{{/if}} {{#if isSimpleDesign}}mod-simple-design{{/if}}">
+      {{ inputTitle }}
+    </span>
+  {{/if}}
+  <input type="{{ type }}"
+          {{#if adress }}id="address"{{/if}}
+         class="gl-input__input
+           {{#if phoneMask }}js-phone-mask{{/if}}
+           {{#if rubMask }}js-rub-mask{{/if}}
+           {{#if isSimpleDesign}}mod-simple-design{{/if}}
+           {{#if numberNoArrows}}mod-no-arrow{{/if}}"
+         placeholder="{{ placeholder }}"
+         name="{{ name }}"
+    {{#if minNumber }}
+         min="{{ minNumber }}"
+    {{/if}}
+
+    {{#if minNumber }}
+         max="{{ maxNumber }}"
+    {{/if}}
+
+    {{#if required }}
+         data-parsley-required=""
+    {{/if}}
+
+    {{#if minLength }}
+         data-parsley-minlength="{{ minLength }}"
+    {{/if}}
+
+    {{#if maxLength }}
+         data-parsley-maxlength="{{ maxLength }}"
+    {{/if}}
+
+    {{#if id }}
+         id="{{id}}-{{type}}"
+    {{/if}}
+
+    {{#if parsleyEqualto }}
+         data-parsley-equalto="{{parsleyEqualto}}-{{type}}"
+    {{/if}}
+
+    {{#if parsleyType }}
+         data-parsley-type="{{ parsleyType }}"
+    {{/if}}
+  >
+</label>

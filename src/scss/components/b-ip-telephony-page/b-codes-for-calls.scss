@@ -1,0 +1,65 @@
+.b-codes-for-calls__icon {
+  height: 2.4rem;
+  fill: var(--main-text-color);
+  margin-left: 1.4rem;
+}
+
+.b-codes-for-calls__content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 9rem;
+  margin-top: 5rem;
+
+  @include for-bg-down {
+    grid-gap: 4rem;
+  }
+
+  @include for-sm-down {
+    grid-template-columns: 1fr;
+    margin-top: 2.6rem;;
+  }
+}
+
+.b-codes-for-calls__title {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+
+  @include for-sm-down {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.b-codes-for-calls__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+
+  &:first-child {
+    border-top: 1px solid #fff
+  }
+}
+
+.b-codes-for-calls__item-caption {
+  font-weight: 300;
+}
+
+.b-codes-for-calls__item-value {
+  text-align: end;
+}
+
+.b-codes-for-calls__btn {
+  margin-bottom: 0;
+}
+
+.b-codes-for-calls__button-icon {
+  height: 2.4rem;
+  fill: var(--main-text-color);
+}

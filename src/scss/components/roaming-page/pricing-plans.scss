@@ -1,0 +1,109 @@
+.pricing-plans {
+  padding: 5rem 0;
+}
+
+.pricing-plans__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-plans__image {
+  height: 50rem;
+  max-width: 100%;
+  margin-right: 5rem;
+
+  @include for-hg-down {
+    height: 40rem;
+  }
+}
+
+.pricing-plans__list {
+  max-width: 87.6rem;
+  width: 100%;
+
+  @include for-md-down {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.pricing-plans__item {
+  & + & {
+    margin-top: 5rem;
+
+    @include for-sm-down {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.pricing-plans__item-title {
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 2rem;
+
+  @include for-sm-down {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.pricing-plans__item-subtitle {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+  color: var(--main-grey-color);
+  margin-bottom: 1.4rem;
+  max-width: 77.2rem;
+
+  @include for-sm-down {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 0;
+  }
+}
+
+.pricing-plans__item-plans-item {
+  padding: 2rem 2rem 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-plans__item-plans-caption {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  color: #555759;
+
+  @include for-sm-down {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  &--hint {
+    color: #A5A5A5;
+  }
+}
+
+.pricing-plans__item-plans-value {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 2rem;
+  white-space: nowrap;
+
+  @include for-sm-down {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .unit {
+    padding-top: 1px;
+    padding-left: 4px;
+  }
+}

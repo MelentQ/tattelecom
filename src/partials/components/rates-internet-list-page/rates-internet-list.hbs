@@ -1,0 +1,114 @@
+<section class="rates-list" id="rates-internet-list-page-host">
+  <div class="gl__page-content">
+
+    <div class="rates-list__content">
+      <h2 class="rates-list__title gl__title">Тарифы интернета</h2>
+
+      <div class="rates-list__menu-container gl__filter-container--lg js-filter-container">
+        <ul class="rates-list__menu-wrapper gl__filter--lg js-modal-container">
+          <button type="button"
+                  class="rates-list__menu-btn-close gl__lg-show gl__filter-modal-close modal__btn-close js-filter-close"
+                  id="close-thanks-modal">
+            <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          {{#each menuBtns }}
+            <li class="rates-list__menu-item">
+              <button type="button" class="rates-list__menu-btn">
+                {{ this }}
+                <svg width="26" height="26" aria-hidden="true" class="rates-list__menu-btn-icon">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </button>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="gl__lg-show">
+        {{> common/btn-settings text="Безлимитный интернет" }}
+      </div>
+
+      <div class="rates-list__list-wrapper">
+        <ul class="rates-list__list">
+          {{#each rates-list}}
+            <li>
+              <div class="rates-list__slide rates-list-internet__item gl__no-default-hover {{#if isOrange}}mod-orange{{/if}} gl__white-container">
+                {{#if isOrange}}
+                  <img src="img/rates-internet-list-page/background-mark.svg" alt=""
+                       class="rates-list-internet__item-background">
+                {{/if}}
+                <div class="rates-list-internet__item-up">
+                  <div class="rates-list-internet__item-block">
+                    <div class="rates-list-internet__item-title">
+                      {{ this.title }}
+                    </div>
+                    <div class="rates-list-internet__item-subtitle">
+                      {{ this.subtitle }}
+                    </div>
+                  </div>
+                  <div class="rates-list-internet__item-block">
+                    <div class="rates-list-internet__item-proposal">
+                      <img src="img/rates-internet-list-page/receiver{{#if isOrange}}-white{{/if}}.svg" alt=""
+                           class="rates-list-internet__item-proposal-img">
+                      <div class="rates-list-internet__item-proposal-caption">
+                        {{ this.internetLvl }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="rates-list-internet__item-block">
+                    <div class="rates-list-internet__item-wifi-wrapper">
+                      <div class="rates-list-internet__item-wifi">
+                        {{ this.wifi }}
+
+                        <div class="rates-list-internet__item-wifi-dropdown">
+                          <div class="rates-list-internet__item-wifi-dropdown-inner">
+                            <p>
+                              Мощный Wi-Fi роутер в аренду за 30 руб./мес
+                            </p>
+                            <a href="/">
+                              Подробнее
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rates-list-internet__item-down">
+                  <div class="rates-list-internet__item-price-wrapper">
+                      <div class="rates-list__slide-old-price">
+                        459 <span>₽/мес</span>
+                      </div>
+                    <div class="rates-list-internet__item-price">
+                      <span class="number">{{ this.price.number }}</span> {{ this.price.unit }}
+                    </div>
+                  </div>
+
+                  <div class="rates-list__slide-btns-wrapper">
+                    <a href="/" class="rates-list__slide-btn-plug gl__main-btn {{#if
+                      isOrange}}mod-white{{/if}} js-open-send-request-modal"
+                            data-tariff-name="{{ this.title }}"
+                            data-prise="{{ this.price.number }}">
+                      Подключить
+                    </a>
+
+                    <div class="rates-list__slide-link-detailed-wrapper">
+                      <a href="/"
+                              class="gl__secondary-btn {{#if isOrange}}mod-white{{/if}}">
+                        Подробнее о тарифе
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

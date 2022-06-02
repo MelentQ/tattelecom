@@ -1,0 +1,307 @@
+.rates-list {
+  padding: 4rem 0 8rem 0;
+
+  @include for-sm-down {
+    padding-top: 2rem;
+  }
+
+  @include for-xs-down {
+    padding: 2rem 0;
+  }
+}
+
+.rates-list__content {
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  grid-gap: 0 3rem;
+
+  @include for-fl-down {
+    grid-template-columns: 26rem 1fr;
+    grid-gap: 0 2rem;
+  }
+
+  @include for-lg-down {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.rates-list__title {
+  @include for-lg-up {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+.rates-list__menu-container {
+  @include for-lg-up {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  @include for-lg-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.rates-list__menu-wrapper {
+  background-color: #fff;
+
+  @include for-lg-down {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.rates-list__menu-btn-close {
+  right: 1rem;
+}
+
+.rates-list__menu-item {
+  border: 1px solid transparent;
+  border-top-color: var(--border-color);
+
+  &:last-child {
+    border-bottom-color: var(--border-color);
+  }
+}
+
+.rates-list__menu-btn {
+  padding: 1.4rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: 0.02em;
+  transition: color 250ms;
+  padding-right: 1.6rem;
+
+  @include for-lg-down {
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: var(--main-color);
+  }
+}
+
+.rates-list__menu-btn-icon {
+  height: 2.6rem;
+  width: 2.6rem;
+  flex: 0 0 2.6rem;
+
+  @include for-lg-down {
+    margin-left: 3rem;
+  }
+}
+
+.rates-list__list-wrapper {
+  @include for-lg-up {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+
+.rates-list__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 3rem;
+
+  @include for-fl-down {
+    grid-gap: 2rem;
+  }
+
+  @include for-sm-down {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 2rem
+  }
+}
+
+.rates-list-internet__item {
+  position: relative;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 44.2rem;
+  z-index: 1;
+
+  &.mod-orange {
+    background-color: var(--main-color);
+    color: #fff;
+    position: relative;
+
+    .rates-list-internet__item-wifi {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .rates-list__slide-link-detailed-wrapper a:hover {
+      color: #fff;
+    }
+
+    ::selection {
+      @extend %select-white-background;
+    }
+
+    .rates-list__slide-old-price {
+      color: #FFCAB7;
+    }
+  }
+}
+
+.rates-list-internet__item-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 46rem;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.rates-list-internet__item-up {
+  margin-bottom: 2rem;
+}
+
+.rates-list-internet__item-block {
+  & + & {
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+.rates-list-internet__proposal-list {
+  margin-bottom: 1.6rem;
+}
+
+.rates-list-internet__item-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: .6rem;
+}
+
+.rates-list-internet__item-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+
+  &.mod-orange {
+    color: var(--main-color);
+    border-bottom: 1px dashed var(--main-color);
+    display: inline-block;
+  }
+}
+
+.rates-list-internet__item-proposal {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-top: 2.4rem;
+  }
+}
+
+.rates-list-internet__item-proposal-img {
+  height: 3.2rem;
+  object-fit: contain;
+  margin-right: 2.4rem;
+}
+
+.rates-list-internet__item-proposal-caption {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+}
+
+.rates-list-internet__item-wifi-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rates-list-internet__item-wifi {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--main-color);
+  letter-spacing: 0.02em;
+  border-bottom: 1px dashed var(--main-color);
+
+  &:hover {
+    .rates-list-internet__item-wifi-dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.rates-list-internet__item-wifi-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 28rem;
+  padding-top: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms, visibillity 200ms;
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  a {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.rates-list-internet__item-wifi-dropdown-inner {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  color: var(--main-text-color);
+  box-shadow: 0 0 10px var(--main-text-color);
+}
+
+.rates-list-internet__item-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.4rem;
+}
+
+.rates-list-internet__item-price {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  .number {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-right: .4rem;
+  }
+
+  del {
+    position: absolute;
+    top: 0;
+    right: -70%;
+  }
+}

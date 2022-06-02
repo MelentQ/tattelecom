@@ -1,0 +1,44 @@
+.roaming-tabs {
+  height: 14rem;
+
+  @include for-sm-down {
+    height: 6rem;
+  }
+
+  @include for-xs-down {
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+.roaming-tabs__content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.roaming-tabs__menu-tabs-wrapper {
+  padding: 4rem 4rem 3rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.roaming-tabs__select-wrapper {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.roaming-tabs__image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.roaming-tabs__image {
+  height: 35.6rem;
+  max-width: 100%;
+  object-fit: contain;
+  margin-top: 5.4rem;
+}

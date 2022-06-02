@@ -1,0 +1,13 @@
+.gpon-map {
+  padding: 4rem 8rem;
+
+  @include for-sm-down {
+    padding: 2rem 0 4rem;
+  }
+}
+
+.gpon-map__map {
+  height: 55.2rem;
+  background-color: lightgrey;
+  width: 100%;
+}

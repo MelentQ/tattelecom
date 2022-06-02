@@ -1,0 +1,45 @@
+{
+  "isBusiness": true,
+  "title": "Поддержка корпоративных клиентов ",
+  "script": "b-support-corporate-page",
+  "banner": {
+    "changeSize": 768,
+    "additionalClass": "b-support-corporate",
+    "largeSubtitle": {
+      "text": "Для оперативной связи со службой поддержки рекомендуем обращаться в справочную службу:",
+      "colorClass": "white"
+    },
+    "bigPhone": {
+      "text": "+7 (843) 238-00-00",
+      "tilLink":"+78432380000",
+      "colorClass": "white"
+    },
+    "image": "b-support-corporate.jpg",
+    "mobile": {
+      "title": "Wi-fi Smart",
+      "image": "b-support-corporate--mobile.jpg"
+    }
+  },
+  "categoriesList": [
+    {
+      "title": "Часто задаваемые вопросы",
+      "img": "img/b-support-corporate-page/category-111.svg"
+    },
+    {
+      "title": "Документы",
+      "img": "img/b-support-corporate-page/category-222.svg"
+    },
+    {
+      "title": "Название категории",
+      "img": "img/b-support-corporate-page/category-333.svg"
+    },
+    {
+      "title": "Название категории",
+      "img": "img/b-support-corporate-page/category-444.svg"
+    },
+    {
+      "title": "Название категории",
+      "img": "img/b-support-corporate-page/category-555.svg"
+    }
+  ]
+}

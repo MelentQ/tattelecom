@@ -1,0 +1,140 @@
+.modal {
+  @extend %modal;
+  z-index: var(--z-index-modal);
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__container {
+  max-height: 100vh;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 0 0.266004px 20px rgba(153, 152, 168, 0.17);
+  border-radius: 10px;
+  margin: 0 1rem;
+  margin-top: 3rem;
+  @extend %scroll;
+
+  &.mod-small {
+    width: 48.2rem;
+  }
+
+  &.mod-middle {
+    width: 60.6rem;
+  }
+
+  &.mod-large {
+    width: 70rem;
+  }
+}
+
+.modal__content {
+  padding: 4rem;
+
+  @include for-sm-down {
+    padding: 2rem;
+  }
+}
+
+.modal__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__btn-close {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.8rem;
+  margin-right: -1.8rem;
+  flex: 0 0 5rem;
+
+  &:hover {
+    .modal__close-icon {
+      fill: var(--main-color);
+
+      &.mod-white {
+        fill: var(--main-text-color);
+      }
+    }
+  }
+}
+
+.modal__close-icon {
+  height: 3.2rem;
+  fill: var(--main-grey-color);
+  pointer-events: none;
+
+  &.mod-white {
+    fill: #fff;
+  }
+}
+
+.modal__title {
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.015em;
+
+  @include for-sm-down {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
+
+.modal__btn-submit {
+  width: 100%;
+}
+
+.modal__text {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+
+.modal__agreement-true {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.02em;
+  margin-top: 1.6rem;
+}
+
+.modal__required-text {
+  position: relative;
+  padding-left: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 4.1rem;
+
+  &::before {
+    content: "*";
+    position: absolute;
+    top: 0.3rem;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--main-color-business);
+  }
+}
+
+.modal__roaming-text {
+  p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+    margin-bottom: 2rem;
+    
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.modal__roaming-title {
+  margin-bottom: 3rem;
+}

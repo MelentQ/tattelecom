@@ -1,0 +1,97 @@
+{
+    "isTattelekom": true,
+    "title": "Годовые отчеты",
+    "script": "tatt-year-page",
+    "bread-crumbs": [
+        {
+          "name": "Главная"
+        },
+        {
+            "name": "Акционерам и инвесторам"
+        },
+        {
+          "name": "Годовые отчеты",
+          "noLink": true
+        }
+    ],
+    "tatt-table-lis": [
+        {
+            "link": "/tattelecom-1/tatt-investors.html",
+            "link-name": "Акционерам и инвесторам"
+        },
+        {
+            "isActive": true,
+            "link": "/tattelecom-1/tatt-year-report.html",
+            "link-name": "Годовые отчеты"
+        },
+        {
+            "link": "/tattelecom-1/tatt-quartal-report.html",
+            "link-name": "Квартальная отчетность"
+        },
+        {
+            "link": "/tattelecom-1/tatt-msfo-report.html",
+            "link-name": "Отчетность по МСФО"
+        },
+        {
+            "link": "/tattelecom-1/tatt-emmision-doc.html",
+            "link-name": "Эмиссионные документы"
+        },
+        {
+            "link": "/tattelecom-1/tatt-internal-doc.html",
+            "link-name": "Учредительные и внутренние документы"
+        },
+        {
+            "link": "/tattelecom-1/tatt-affiliates-list.html",
+            "link-name": "Список аффилированных лиц"
+        },
+        {
+            "link": "/tattelecom-1/tatt-essential-facts.html",
+            "link-name": "Существенные факты"
+        },
+        {
+            "link": "/tattelecom-1/tatt-ratings.html",
+            "link-name": "Рейтинги"
+        },
+        {
+            "link": "/tattelecom-1/tatt-meetings-shareholders.html",
+            "link-name": "Cобрания акционеров"
+        },
+        {
+            "link": "/tattelecom-1/tatt-info-open.html",
+            "link-name": "Раскрытие информации"
+        },
+        {
+            "link": "/tattelecom-1/tatt-financial-statements.html",
+            "link-name": "Бухгалтерская отчетность"
+        }
+    ],
+    "year-select": [
+        {
+          "selectTitle": "Год",
+          "name": "year-select",
+          "required": true,
+          "isSimpleDesign": true,
+          "isBorderBottom": false,
+          "options": [
+            "2020",
+            "2019"
+          ]
+        }
+    ],
+    "report-list": [
+        {
+            "pdf-file": {
+                "size": "pdf 2,97 мб",
+                "caption": "Годовой отчет ПАО 'Таттелеком' за 2019 г"
+            }
+        },
+        {
+            "pdf-file": {
+                "isDoc": true,
+                "size": "doc 553 кб",
+                "caption": "Приложение к годовому отчету ПАО 'Таттелеком' за 2019 года о соблюдении принципов и рекомендаций Кодекса корпоративного управления"
+            }
+        }
+    ]
+
+}  

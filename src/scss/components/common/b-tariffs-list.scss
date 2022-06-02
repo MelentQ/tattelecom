@@ -1,0 +1,354 @@
+.b-tariffs-list {
+  overflow: hidden;
+  &__content {
+  }
+
+  &__text {
+    max-width: 76rem;
+  }
+
+  &__block-list {
+    & + & {
+      margin-top: 5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.015em;
+    color: var(--grey-text);
+    margin-bottom: 2.4rem;
+
+    @include for-sm-down {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.4rem;
+    }
+  }
+}
+
+.b-tariffs-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  min-height: 41rem;
+  height: 100%;
+  @extend %hover-slide-link;
+
+  &.mod-hit {
+    background-color: #00A8E7;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+    .b-tariffs-item__background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 32rem;
+      height: 34.6rem;
+      object-fit: contain;
+      z-index: -1;
+    }
+
+    .b-tariffs-item__caption, .b-tariffs-item__simple-flex-caption, .b-tariffs-item__simple-flex {
+      color: #fff;
+    }
+
+    .b-tariffs-item__service-icon, .b-tariffs-item__simple-flex-icon {
+      fill: #fff;
+    }
+
+    .b-tariffs-item__btn {
+      background-color: #fff;
+      color: var(--main-color-business);
+
+      &:hover {
+        background-color: #e5e5e5;
+        color: var(--main-color-business) !important;
+      }
+    }
+  }
+
+  &.mod-red-btn {
+    .b-tariffs-item__btn {
+      background-color: var(--main-color);
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: var(--main-color) !important;
+      }
+    }
+  }
+
+  &.mod-select-card {
+    .b-tariffs-item__services-list-caption {
+      color: var(--main-text-color);
+    }
+
+    .b-tariffs-item__simple-signature {
+      font-weight: 600;
+    }
+  }
+
+  &.mod-is-small-card {
+    min-height: 27.8rem;
+
+    .b-tariffs-item__name {
+      margin-bottom: 0;
+    }
+
+    .b-tariffs-item__services-list-container {
+      border-bottom: solid 0.1rem var(--border-color);
+      padding-bottom: 2.2rem;
+    }
+  }
+
+  &.mod-expanded {
+    .b-tariffs-item__services-list-container {
+      margin-bottom: .6rem;
+    }
+
+    .b-tariffs-item__cost-block {
+      margin-bottom: .6rem;
+    }
+  }
+
+  &__name {
+    margin-bottom: 3.2rem;
+
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__caption {
+    margin-top: -2.6rem;
+    margin-bottom: 1.2rem;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: normal;
+
+    color: var(--grey-text);
+  }
+
+  &__services-list-container {
+    margin-bottom: 2.8rem;
+  }
+
+  &__services-list-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 2.4rem;
+
+    border-top: solid 0.1rem var(--border-color);
+
+    &.border-bottom {
+      &:last-child {
+        border-bottom: solid 0.1rem var(--border-color);
+      }
+    }
+  }
+
+  &__services-list-caption {
+    margin-bottom: 1rem;
+
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #ADADAD;
+  }
+
+  &__service {
+    position: relative;
+
+    margin-bottom: 0.8rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__service-icon {
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    fill: var(--main-grey-color);
+  }
+
+  &__service-name {
+    display: block;
+
+    padding-left: 3.6rem;
+  }
+
+  &__plus {
+    padding: .6rem 1rem;
+    background-color: var(--border-color);
+    color: var(--main-color);
+    display: inline-block;
+
+    margin-bottom: 0.8rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__simple-signature {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  &__simple-flex-caption-wrapper {
+    display: flex;
+  }
+
+  &__simple-flex {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.4rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      margin-top: 2rem;
+    }
+  }
+
+  &__simple-flex-icon {
+    height: 1.6rem;
+    object-fit: contain;
+    fill: var(--main-grey-color);
+    margin-right: 1.4rem;
+  }
+
+  &__simple-flex-caption {
+    color: var(--grey-text);
+    font-weight: 300;
+  }
+
+  &__simple-flex-value {
+    text-align: end;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__cost-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-bottom: 2.8rem;
+    margin-left: auto;
+  }
+
+  &__cost {
+    flex-shrink: 0;
+
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  &__cost-label {
+    flex-shrink: 0;
+
+    margin: 0 0.5rem;
+    padding-bottom: 0.4rem;
+
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 300;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__cost-old-price {
+    flex-shrink: 0;
+
+    margin: 0 0.5rem;
+    padding-bottom: 0.4rem;
+
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: rgba($color: #2B2B2B, $alpha: 0.5);
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.b-tariffs-item-simple {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--main-grey-color);
+  border-radius: 10px;
+  height: 100%;
+  min-height: 19.2rem;
+
+  @include for-sm-down {
+    min-height: 16.2rem;
+  }
+}
+
+.b-tariffs-item-simple__text {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-bottom: 1.2rem;
+
+  @include for-sm-down {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.b-tariffs-item-simple__cost {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-align: end;
+
+  @include for-sm-down {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .num {
+    font-size: 4rem;
+    line-height: 5.2rem;
+    margin-right: .4rem;
+
+    @include for-sm-down {
+      font-size: 3rem;
+      line-height: 4.2rem;
+    }
+  }
+}

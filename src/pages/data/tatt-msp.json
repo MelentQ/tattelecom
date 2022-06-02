@@ -1,0 +1,81 @@
+{
+    "isTattelekom": true,
+    "title": "Информация для субъектов МСП",
+    "script": "tatt-msp-page",
+    "bread-crumbs": [
+        {
+          "name": "Главная"
+        },
+        {
+          "name": "Партнерам"
+        },
+        {
+            "name": "Поставщикам"
+        },
+        {
+            "name": "Информация для субъектов МСП",
+            "noLink": true
+        }
+    ],
+    "tatt-table-list": [
+        {
+            "isSubmenu": true,
+            "link": "/tattelecom-1/tatt-suppliers.html",
+            "link-name": "Поставщикам",
+            "isDropOpen": true,
+            "submenu": [
+                {
+                    "submenu-link": "/tattelecom-1/tatt-purchases.html",
+                    "submenu-link-name": "Закупки"
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-msp.html",
+                    "submenu-link-name": "Информация для субьектов МСП",
+                    "isCurrent": true
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-tru.html",
+                    "submenu-link-name": "Перечень ТРУ для МСП "
+                },
+                {
+                    "submenu-link": "/tattelecom-1/tatt-regulations.html",
+                    "submenu-link-name": "Нормативные документы"
+                }
+            ]
+        },
+        {
+            "link": "/tattelecom-1/tatt-telecom-operators.html",
+            "link-name": "Операторам связи"
+        },
+        {
+            "link": "/tattelecom-1/tatt-dealers.html",
+            "link-name": "Дилерам"
+        }
+    ],
+    "suppliers-archive-list": [
+        {
+            "archive-file": {
+                "name": "Бесплатный ресурс для предпринимателей МСП, желающих открыть или расширить свой бизнес – Бизнес-навигатор МСП",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Презентация АО Федеральная Корпорация по финансовой поддержке субъектов малого и среднего предпринимательства",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Программа партнерства ПАО «Таттелеком» с субъектами малого и среднего предпринимательства",
+                "size": "Zip 2,97 МБ"
+            }
+        },
+        {
+            "archive-file": {
+                "name": "Реестр участников Программы партнерства",
+                "size": "Zip 2,97 МБ"
+            }
+        }
+    ]
+}  

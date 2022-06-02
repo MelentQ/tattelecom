@@ -1,0 +1,242 @@
+.services {
+  background-color: var(--border-color);
+  padding: 8rem 0;
+
+  .gl-input__input, .services__btn-submit {
+    height: 5.4rem;
+  }
+
+  @include for-sm-down {
+    padding: 5rem 0;
+  }
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3rem;
+
+  @include for-md-down {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include for-sm-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.services__item-wrapper {
+  padding: 3.6rem 4.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: initial;
+
+  @include for-xs-down {
+    padding: 2rem
+  }
+
+  &.mod-painted {
+    background-color: var(--main-color);
+    color: #fff;
+
+    ::selection {
+      @extend %select-white-background;
+    }
+
+    .gl-input__title {
+      color: #fff;
+    }
+
+    .parsley-required, .checkbox__wrapper.parsley-error .checkbox__text {
+      color: var(--main-text-color);
+    }
+
+    .parsley-error, .select__container.parsley-error .choices__inner, .checkbox__wrapper.parsley-error .checkbox__content {
+      border-color: var(--main-text-color) !important;
+    }
+  }
+
+  &:nth-child(1) {
+    grid-column: 1 / 8;
+
+    @include for-md-down {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &:nth-child(2) {
+    grid-column: 8 / 13;
+
+    @include for-md-down {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &:nth-child(3) {
+    grid-column: 1 / 6;
+
+    @include for-md-down {
+      grid-column: 4 / 7;
+    }
+  }
+
+  &:nth-child(4) {
+    grid-column: 6 / 13;
+
+    @include for-md-down {
+      grid-column: 1 / 7;
+    }
+  }
+
+  @include for-sm-down {
+    grid-column: auto !important;
+  }
+}
+
+.services__item-info-title {
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 2.8rem;
+  display: flex;
+  align-items: center;
+
+  @include for-xs-down {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.services__item-info-title-icon {
+  height: 6rem;
+  margin-right: 2rem;
+}
+
+.services__form-wrapper {
+  color: var(--main-text-color);
+  z-index: 2;
+}
+
+.services__form-inputs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  grid-gap: 1.4rem;
+
+  @include for-hg-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.services__btn-submit-wrapper {
+  @include for-hg-down {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include for-xs-down {
+    grid-column: 1 / 3;
+  }
+}
+
+.services__btn-submit {
+  &.mod-transparent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:hover {
+      border-color: #fff;
+      background-color: #ffffff;
+      color: var(--main-color) !important;
+    }
+  }
+
+  @include for-xs-down {
+    width: 100%;
+  }
+}
+
+.services__form-hint {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+  max-width: 34rem;
+
+  @include for-md-down {
+    margin-bottom: 2.4rem;
+    max-width: 100%;
+  }
+}
+
+.services__item-info-container   {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__item-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services__item-content-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__item-info-text {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+
+  @include for-xs-down {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+.services__item-info-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  transition: color 250ms;
+
+  &:hover {
+    color: var(--main-color);
+  }
+}
+
+.services__item-info-btn-icon {
+  height: 3rem;
+  fill: var(--main-text-color);
+  margin-left: 1rem;
+}
+
+.services__item-info-image {
+  height: 22.6rem;
+
+  @include for-xs-down {
+    height: 15.2rem;
+  }
+}
+
+.services__checkbox {
+  margin-top: 4rem;
+}
+
+.services__form-payment-warpper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.6rem;
+
+  @include for-md-down {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,54 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> common/b-page-banner }}
+
+    <section class="b-info">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          Об услуге
+        </h2>
+
+        <p class="b-info__text">
+          Это самый современный вид телефонии, основанный на использовании последних достижений в области передачи
+          данных. Главный козырь SIP-телефонии - это географическая независимость. Телефонный номер привязан к абоненту,
+          что позволяет ему свободно перемещаться, менять место жительства (в пределах муниципального образования),
+          сохраняя свой телефонный номер.
+        </p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          При помощи цифровой телефонии «Таттелеком» вы сможете:
+        </h2>
+        {{> common/b-check-items check-items=check-items-opportunities }}
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          Преимущества технологии SIP
+        </h2>
+        {{> common/b-check-items check-items=check-items-advantages }}
+      </div>
+    </section>
+
+    {{> b-sip-telephony-page/b-sip-telephony-rates }}
+
+    {{> b-sip-telephony-page/faq faqSection=ratesForServices }}
+
+    {{> b-sip-telephony-page/faq faqSection=ratesForMaintenance }}
+
+    {{> common/b-advantages-opportunities }}
+
+    {{> common/b-request-for-connection }}
+
+    {{> common/faq/section-faq faq=mainFaq }}
+
+    {{> common/b-support }}
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,33 @@
+<header class="header {{#if isBusiness}}mod-business{{/if}} {{#if isTattelekom}}mod-tattelekom{{/if}} {{#if isBusinessMain}}js-business-main{{/if}}" id="header-host">
+  <div class="header__content" {{#if isBusiness}}style="background-image: url('img/header/buliness-background.jpg')"{{/if}}>
+
+    <div class="header__main-content">
+      {{#if isTattelekom}}
+        {{> layout-header/header-tattelekom-top-block }}
+      {{ else }}
+        {{> layout-header/header-top-block }}
+      {{/if}}
+
+      {{#if isBusiness}}
+        {{> layout-header/header-b-bottom-block }}
+<!--      Вот тут убрать весь блок header__b-main-page-menu-->
+      {{ else }}
+        {{#if isTattelekom }}
+          {{> layout-header/header-tattelekom-bottom-block }}
+        {{ else }}
+          {{> layout-header/header-bottom-block }}
+        {{/if}}
+      {{/if}}
+    </div>
+
+    {{#if isBusiness }}
+      {{> layout-header/header-b-pop-up }}
+    {{ else }}
+      {{#if isTattelekom }}
+        {{> layout-header/header-pop-up-tatt }}
+        {{ else }}
+          {{> layout-header/header-pop-up }}
+        {{/if}}
+    {{/if}}
+  </div>
+</header>

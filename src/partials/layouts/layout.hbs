@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="format-detection" content="telephone=no">
+  <script src="assets/js/ie11CustomProperties.js"></script>
+  <link rel="stylesheet" href="css/styles.min.css"/>
+  <link type="image/png" href="img/common/tattelecom-small-logo.png" rel="icon">
+  <title>
+    {{ title }}
+  </title>
+</head>
+<body class="no-touch {{#if isTattelekom}}js-tattelekom-pages tattelekom-pages{{/if}}">
+<div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  {{> sprite }}
+</div>
+
+<div class="gl__layout-wrapper {{#if isBusiness }}mod-business{{/if}}">
+  {{#if noLayout }}
+  {{else }}
+    <div class="gl__layout-header">
+      {{> layout-header/header }}
+    </div>
+  {{/if}}
+
+  <main class="gl__layout-content">
+    {{#if isBusinessMain }}
+      {{> layout-header/header-b-menu-main-page }}
+    {{/if}}
+    {{#block "main"}}{{/block}}
+  </main>
+
+  {{#if noLayout }}
+  {{else }}
+    <div class="gl__layout-footer">
+      {{> layout-footer }}
+    </div>
+  {{/if}}
+
+  {{> modals/callback }}
+  {{> modals/thanks }}
+  {{> modals/b-thanks }}
+  {{> modals/send-request }}
+  {{> modals/about-tariff }}
+  {{> modals/installments }}
+  {{> modals/top-up-account }}
+  {{> modals/sucess-request }}
+  {{> modals/bad-request }}
+  {{> modals/b-request-modal }}
+  {{> modals/b-request-services-modal }}
+  {{> modals/b-roaming-modal }}
+
+  {{> side-bar }}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU"
+          type="text/javascript"></script>
+  <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.8.0/dist/css/suggestions.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.8.0/dist/js/jquery.suggestions.min.js"></script>
+  <script src="js/common.js"></script>
+  {{#if isPrivateClients }}<script src="js/common-private-clients.js"></script>{{/if}}
+  {{#if script }}
+    <script src="js/{{script}}.js"></script>
+  {{/if}}
+  <script src="assets/js/backend.js"></script>
+</div>
+</body>
+</html>

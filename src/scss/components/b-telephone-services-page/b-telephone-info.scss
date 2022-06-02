@@ -1,0 +1,10 @@
+.b-telephone-info__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 11.6rem;
+
+  @include for-bg-down {
+    grid-gap: 6rem;
+    grid-template-columns: 1fr;
+  }
+}

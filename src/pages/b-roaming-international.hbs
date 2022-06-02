@@ -1,0 +1,101 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> common/b-page-banner }}
+
+    <section class="b-roaming-international-intro gl__section">
+      <div class="gl__page-content">
+        <div class="b-roaming-international-intro__inner">
+          <div class="b-roaming-international-intro__form-block">
+            <h3 class="b-roaming-international-intro__block-title">Узнайте, как оптимизировать свои расходы в поездках
+              по миру</h3>
+            {{> common/roaming-without-worries-form }}
+          </div>
+          <div class="ghost"></div>
+          <div class="b-roaming-international-intro__list-block">
+            <h3 class="b-roaming-international-intro__block-title">Чтобы начать пользоваться национальным роумингом,
+              необходимо:</h3>
+            <ul class="b-roaming-international-intro__list">
+              {{!-- Код взят из компонента common/b-steps --}}
+              {{#each steps }}
+                <li class="b-steps__item">
+                  <span class="b-steps__item-num">{{this.num}}</span>
+                  <p class="b-steps__item-description">{{this.description}}</p>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{> roaming-page/price-list }}
+
+    <section class="b-roaming-international-options gl__section">
+      <div class="gl__page-content">
+        <div class="swiper b-roaming-international-options__inner" id="js-init-options-slider">
+          <ul class="swiper-wrapper b-roaming-international-options__slider">
+            {{#each connection-options}}
+              <li class="swiper-slide b-roaming-international-options__slide js-b-roaming-slide" 
+                data-heading="{{this.name}}" 
+                data-content="
+                  <p>
+                      Услуга «Весь Мир» подключается бесплатно. Подходит для случаев, когда роуминг должен быть включен
+                      всегда. Услуга дает существенную скидку на звонки и интернет по сравнению с базовыми тарифами.
+                  </p>
+                  <p>
+                      Абонентская плата всего 10 рублей в месяц.
+                      <br>
+                      - Подключение по USSD-запросу: *111*328#
+                      <br>
+                      - Отключение по USSD-запросу: *111*329#
+                  </p>
+                  <p>
+                      При подключении услуги абонент должен находиться в активном состоянии, должна быть подключена базовая
+                      услуга «Международного роуминга».
+                  </p>">
+                <svg aria-hidden="true" class="b-roaming-international-options__slide-icon">
+                  <use xlink:href="#service-card-with-photo-background"></use>
+                </svg>
+                <h3 class="b-roaming-international-options__slide-title">{{this.name}}</h3>
+                <div class="b-roaming-international-options__slide-cost-block">
+                  <span class="b-roaming-international-options__slide-cost">{{this.cost}}</span>
+                  <span class="b-roaming-international-options__slide-cost-label">₽/мес</span>
+                </div>
+                <a href="" class="b-roaming-international-options__slide-btn js-open-b-roaming-modal">
+                  <span class="b-roaming-international-options__slide-btn-label">Подробнее</span>
+                  <svg aria-hidden="true" class="b-roaming-international-options__slide-btn-icon">
+                    <use xlink:href="#arrow-line-right"></use>
+                  </svg>
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {{> common/b-request-for-connection }}
+
+    {{> ussd-requests-page/ussd-faq }}
+
+    <section class="b-info">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          О роуминге
+        </h2>
+
+        <p class="b-info__text">
+          Мы продолжаем активно развивать собственную сеть на территории Республики Татарстан. За ее пределами у нас
+          нет собственной сети. Но даже находясь за пределами домашнего региона, вы всегда сможете оставаться на связи,
+          благодаря нашим партнерам-операторам.
+        </p>
+      </div>
+    </section>
+
+    {{> common/faq/section-faq }}
+
+    {{> common/b-support }}
+
+  {{/content}}
+{{/extend}}

@@ -1,0 +1,124 @@
+{
+  "title": "Промо Много интернета",
+  "isPrivateClients": true,
+  "script": "promo-internet-page",
+  "rates-preview": [
+    {
+      "pageName": "promo-internet",
+      "img": "img/promo-internet-page/rates-preview.png",
+      "ratesName": "Безлимитный интернет 4G",
+      "ratesCaption": ["за 240₽/мес"],
+      "btn": {
+        "text": "Подключить"
+      }
+    }
+  ],
+  "promo-internet-info-list": [
+    {
+      "img": "img/promo-internet-page/rocket.svg",
+      "caption": "Устали считать интернет-трафик?",
+      "text": "С нашими лучшими тарифами вы забудете об ограничениях по Гигабайтам"
+    },
+    {
+      "img": "img/promo-internet-page/tower.svg",
+      "caption": "Хотите качественную связь?",
+      "text": "У нас одно из самых широких покрытий в Республике Татарстан. 1537 действующих станций и 200 будет построено в 2020 году"
+    }
+  ],
+  "rates-list": [
+    {
+      "title": "Много интернета",
+      "subtitle": "Перейти по USSD *116*204#",
+      "unlimited": true,
+      "calls": [
+        "200 мин. звонки по РТ"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "240"
+    },
+    {
+      "title": "Много минут",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "350"
+    },
+    {
+      "title": "Много интернета",
+      "subtitle": "Перейти по USSD *116*204#",
+      "unlimited": true,
+      "calls": [
+        "200 мин. звонки по РТ"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "240"
+    },
+    {
+      "title": "Много минут",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "350"
+    },
+    {
+      "title": "Много минут",
+      "subtitle": "Перейти по USSD *116*201#",
+      "unlimited": true,
+      "calls": [
+        "500 мин. звонки по РТ",
+        "300 мин. звонки по РФ",
+        "Безлимитные звонки на «Летай»"
+      ],
+      "opportunities": "Смартфоны в рассрочку Кешбек 20%",
+      "price": "350"
+    }
+  ],
+  "promo-internet-advantages-list": [
+    {
+      "img": "img/promo-internet-page/sim-cards.png",
+      "caption": "Доставка SIM-карты бесплатно на дом",
+      "value": "Курьер бесконтактно привезет SIM-карту в удобное для Вас место"
+    },
+    {
+      "img": "img/promo-internet-page/coins.png",
+      "caption": "Простые и честные цены",
+      "value": "Вам не нужно «собирать» тариф по частям или искать скрытые условия. Тарифы линейки «МНОГО» очень простые и прозрачные"
+    },
+    {
+      "img": "img/promo-internet-page/phone.png",
+      "caption": "Раздача интернета со смартфона"
+    }
+  ],
+  "steps-list": [
+    {
+      "img": "img/promo-internet-page/connect/finger.png",
+      "caption": "Шаг 1",
+      "text": "Нажмите кнопку «Оставить заявку»"
+    },
+    {
+      "img": "img/promo-internet-page/connect/operator.png",
+      "caption": "Шаг 2",
+      "text": "Оператор связывается с Вами в течении 15 минут"
+    },
+    {
+      "img": "img/promo-internet-page/connect/truck.png",
+      "caption": "Шаг 3",
+      "text": "Определяете дату и адрес доставки SIM-карты"
+    },
+    {
+      "img": "img/promo-internet-page/connect/check-mark.png",
+      "caption": "Готово!",
+      "text": "Пользуетесь мобильной связью «Летай»"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+.sales-offices-map {
+  padding-top: 4rem;
+
+  @include for-sm-down {
+    padding-top: 2rem;
+  }
+}
+
+.sales-offices-map__container {
+  @include for-sm-up {
+    position: relative;
+    height: 67rem;
+  }
+}
+
+.sales-offices-map__points-list {
+  @include for-sm-up {
+    position: absolute;
+    top: 3.8rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &.mod-b {
+    .sales-offices-map__item-work-caption,
+    .sales-offices-map__not-found {
+      color: var(--main-color-business);
+    }
+
+    .sales-offices-map__list {
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--main-color-business);
+      }
+    }
+  }
+}
+
+.sales-offices-map__map {
+  background-color: lightgrey;
+
+  @include for-sm-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include for-sm-down {
+    height: 40rem;
+  }
+
+  .address {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--main-text-color);
+  }
+
+  .city {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--main-grey-color);
+  }
+
+  .body-wrapper {
+    margin-top: .4rem;
+  }
+
+  .body-item {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: .2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .caption {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--main-color);
+  }
+
+  .value {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+
+.sales-offices-map__points-list__content {
+  @include for-sm-up {
+    width: 41rem;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(51, 51, 51, 0.04), 0 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    pointer-events: auto;
+  }
+
+  @include for-sm-down {
+    margin-bottom: 4rem;
+  }
+}
+
+.sales-offices-map__form {
+  @include for-sm-up {
+    padding: 1rem 3rem;
+  }
+
+  @include for-sm-down {
+    margin-bottom: 2rem;
+
+    .checkbox__content {
+      width: 2rem;
+      height: 2rem;
+      flex: 0 0 2rem;
+      margin-right: 1rem;
+      margin-top: 0.2rem;
+    }
+  }
+}
+
+.sales-offices-map__input-search-wrapper {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--main-text-color);
+  margin-bottom: 2rem;
+
+  @include for-sm-down {
+    height: 4rem;
+  }
+}
+
+.sales-offices-map__input-search {
+  height: 100%;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+
+  &::placeholder {
+    color: var(--main-grey-color);
+  }
+}
+
+.sales-offices-map__input-search-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-left: .6rem;
+  fill: var(--main-text-color);
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.sales-offices-map__list {
+  height: 43rem;
+  overflow: auto;
+  @extend %scroll;
+
+  &.mod-no-items {
+    height: 38rem;
+
+    @include for-sm-down {
+      height: auto;
+    }
+  }
+
+  @include for-sm-down {
+    height: 34rem;
+  }
+}
+
+.sales-offices-map__item {
+  padding: 1.6rem 3rem;
+  border-top: 1px solid var(--border-color-2);
+  cursor: pointer;
+
+  @include for-sm-down {
+    padding: 1.6rem 0;
+  }
+
+  &.mod-hide, &.mod-hide-no-partner {
+    display: none;
+  }
+}
+
+.sales-offices-map__item-header {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-bottom: .8rem;
+}
+
+.sales-offices-map__item-city {
+  color: var(--main-grey-color);
+  margin-left: .8rem;
+}
+
+.sales-offices-map__item-work-time-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 7.4rem);
+  grid-gap: 2rem;
+}
+
+.sales-offices-map__item-work-caption {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: var(--main-color);
+}
+
+.sales-offices-map__item-work-value {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  white-space: nowrap;
+}
+
+.sales-offices-map__not-found {
+  padding: 1.6rem 3rem;
+  color: var(--main-color);
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  @include for-sm-down {
+    padding: 0;
+  }
+
+  &:not(.mod-show) {
+    display: none;
+  }
+}
+
+.sales-offices-map__form-reset {
+  position: relative;
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--main-text-color);
+    transform: translate(-50%, -50%);
+
+    &:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

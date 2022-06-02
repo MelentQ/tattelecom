@@ -1,0 +1,151 @@
+.b-fractional-slider {
+  overflow: hidden;
+}
+
+.b-fractional-slider__slide {
+  min-height: 37rem;
+  width: min-content !important;
+}
+
+.b-fractional-slider__slide-card {
+  border-radius: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  @extend %hover-slide-link;
+
+  &.mod-big {
+    width: 66.4rem;
+    padding: 3.8rem;
+    color: #fff;
+
+    @include for-bg-down {
+      width: 52.6rem;
+    }
+
+    @include for-xs-down {
+      width: 31.6rem;
+    }
+
+    .b-fractional-slider__card-title {
+      font-weight: 600;
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+
+    .b-fractional-slider__card-subtitle {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &.mod-large {
+    padding: 3rem 3.2rem;
+    width: 56rem;
+
+    @include for-bg-down {
+      width: 43.8rem;
+    }
+
+    @include for-xs-down {
+      width: 31.6rem;
+    }
+
+    .b-fractional-slider__card-title {
+      font-size: 4.4rem;
+      line-height: 4.8rem;
+      max-width: 50%;
+    }
+
+    .b-fractional-slider__card-subtitle {
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+      color: var(--main-color-business);
+    }
+  }
+
+  &.mod-middle-horizontal {
+    padding: 2.2rem;
+    width: 40rem;
+
+    @include for-bg-down {
+      width: 29rem;
+    }
+
+    & + & {
+      margin-top: 2rem;
+    }
+  }
+
+  &.mod-middle-vertical {
+    padding: 2rem 1.4rem;
+    width: 23.6rem;
+  }
+
+  &.mod-middle-horizontal, &.mod-middle-vertical {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+
+    .b-fractional-slider__card-subtitle {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #fff;
+      max-width: 50%;
+    }
+  }
+
+  &.mod-small {
+    padding: 1.6rem;
+    width: 17rem;
+    background: linear-gradient(135deg, #E45620 0%, #E84735 100%);
+    color: var(--border-color);
+
+    & + & {
+      margin-top: 2rem;
+    }
+
+    .b-fractional-slider__card-title {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    .b-fractional-slider__card-subtitle {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      letter-spacing: 0.015em;
+    }
+  }
+
+  &.mod-price {
+    .b-fractional-slider__card-subtitle {
+      max-width: 8rem;
+      font-weight: bold;
+      line-height: 2.6rem;
+    }
+  }
+
+  &.mod-center {
+    justify-content: center;
+  }
+}
+
+.b-fractional-slider__card-title {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.b-fractional-slider__card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}

@@ -1,0 +1,31 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> common/b-page-banner }}
+
+    {{> common/b-about-service }}
+
+    {{> common/b-advantages-opportunities }}
+
+    <section class="b-check-items" id="b-check-items-host">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          Возможности Виртуальной АТС
+        </h2>
+
+        {{> common/b-check-items }}
+      </div>
+    </section>
+
+    {{> common/b-tariffs-list/section }}
+
+    {{> common/b-request-for-connection }}
+
+    {{> common/b-useful-articles }}
+
+    {{> common/faq/section-faq }}
+
+    {{> common/b-support }}
+
+  {{/content}}
+{{/extend}}

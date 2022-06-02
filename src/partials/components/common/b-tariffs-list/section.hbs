@@ -1,0 +1,84 @@
+{{!-- Секция "Тарифы" --}}
+{{!-- Стандартный набор данных: --}}
+{{!-- "tariffs": [
+      {
+        "isExpandedCard": true, -- маргины у цены поменьше
+        "isSelectCards": true, -- кнопка выбрать, вместо "подключить" и модификация шрифта
+        "noMore": true, -- Убрать кнопку "подробнее о тафифе"
+        "isHit": true, - голубой фон
+        "isRedBtn": true, - оранжевая кнопка
+        "name": "Корпорация-150",
+        "caption": "Синяя подпись"
+        "conditionsList": [
+          {
+            "services": {
+              "caption": "Мобильная связь", -- если есть заголово квсей группы
+              "calls": "Безлимитные звонки внутри корпоративной группы",
+              "internet": "5 ГБ 4G интернета",
+              "callsRT": "250 мин на номера РТ",
+              "users": "От 1 до 5 участников",
+              "files": "Демонстрация документов...",
+              "presence": "Отображение состояния присутствия",
+              "webinars": "Вебинары до 300 участников",
+              "simpleSignature": "...",
+              "simpleFlexsList": [
+                {
+                  "caption": "...",
+                  "value": "..."
+                     если есть иконки:
+                  "isSpeed": true, - Скорость на сессию
+                  "isSpeedDown": true, - Скорость канала
+                  "isDevices": true, - Количество устройств
+                  "isWiFi": true, - Оборудование
+                  "isOption": true, - Опция таргет
+                }
+           }
+        ],
+        "cost": 150
+      }
+] --}}
+
+<!-- если есть ссылки на pdf файлы под тарифами-->
+<!--
+  "tariffsPdfFiles": [
+    {
+      "name": "Подробное описание тарифа Видеомониторинг",
+      "size": "(PDF, 395.3 KB)"
+    }
+  ]
+-->
+
+<!-- если есть "Тарифы указаны с учётом НДС" -->
+<!--
+  "tariffsNdsHint": true
+-->
+
+<section class="b-tariffs-list gl__section">
+  <div class="gl__page-content">
+    <h2 class="gl__title">
+      {{#if customTitle }}{{ customTitle }}{{else}}Тарифы{{/if}}
+    </h2>
+
+    {{> common/b-tariffs-list/content }}
+
+    {{#each tariffsPdfFiles }}
+      <a href="" download class="faq__download-link">
+        <svg width="24" height="24" aria-hidden="true" class="faq__download-link-icon">
+          <use xlink:href="#download-top"></use>
+        </svg>
+        <span>
+          <span class="faq__download-link-name">
+            {{ this.name }}
+          </span>
+          {{ this.size }}
+        </span>
+      </a>
+    {{/each}}
+
+    {{#if tariffsNdsHint }}
+      <div class="gl__b-hint-nds mod-no-line">
+        Тарифы указаны с учетом НДС
+      </div>
+    {{/if}}
+  </div>
+</section>

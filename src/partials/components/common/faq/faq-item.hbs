@@ -1,0 +1,42 @@
+{{#each faq }}
+  <li class="faq__item {{#if noBorder }}mod-no-border{{/if}} {{#if isBusiness }}mod-business{{/if}}">
+    {{#if singleQuestion }}
+      <button type="button" class="{{#if globalTitleStyle }}gl__title{{else}} faq__item-btn-wrapper{{/if}} faq__item-btn-hover mod-single-question gl__drop-menu-btn js-drop-menu-btn">
+        <svg width="32" height="32" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
+          <use xlink:href="#arrow-down"></use>
+        </svg>
+        {{ this.title }}
+      </button>
+    {{else }}
+      <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
+        <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
+          <use xlink:href="#arrow-down"></use>
+        </svg>
+        {{ this.title }}
+      </button>
+    {{/if}}
+
+    {{#if this.text }}
+      <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
+        <div class="gl__text gl__drop-menu js-drop-menu">
+          {{#each this.text }}
+            <p>{{ this }}</p>
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if this.flexs }}
+      <div class="faq__flexs-list gl__drop-menu-container js-drop-menu-container">
+        <ul class="gl__drop-menu js-drop-menu">
+          {{#each this.flexs }}
+            <li class="info-drop-menu__flex">
+              <div class="info-drop-menu__flex-caption">{{ this.caption }}</div>
+              <div class="info-drop-menu__flex-value">{{ this.value }}</div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+  </li>
+{{/each}}

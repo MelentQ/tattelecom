@@ -1,0 +1,38 @@
+{{!-- Для блока "Полезные статьи для бизнеса" --}}
+{{!-- Стандартные данные для json: --}}
+{{!-- "usefulArticles": [
+    {
+      "image": "useful-article-1.jpg",
+      "title": "Название статьи",
+      "description": "Краткое описание в 2-3 строчки о сути статьи, Краткое описание в 2-3 строчки о сути статьи."
+    }
+  ], --}}
+
+<section class="b-useful-articles gl__section">
+  <div class="gl__page-content">
+    <h2 class="gl__title">
+      {{#if customTitle}}{{customTitle}}{{else}}Полезные статьи для бизнеса{{/if}}
+    </h2>
+
+    <div class="b-useful-articles__content">
+      <div class="gl-slider js-swiper" data-swiper-slides-preview="3">
+        {{> common/controls/b-btns-slider }}
+        <div class="gl-slider__b-container gl-slider__container swiper-container js-swiper-container">
+          <ul class="gl-slider__wrapper swiper-wrapper" id="js-align-heights">
+            {{#each usefulArticles }}
+              <li class="swiper-slide">
+                <a href="" class="b-useful-article  gl__no-default-hover rates-list__slide">
+                  <img class="b-useful-article__image" src="img/common/b-useful-articles/{{this.image}}"
+                       alt="{{this.title}}">
+                  <div class="b-useful-article__overlay"></div>
+                  <h3 class="b-useful-article__title">{{this.title}}</h3>
+                  <p class="b-useful-article__description">{{this.description}}</p>
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

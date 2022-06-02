@@ -1,0 +1,133 @@
+.b-advantages-opportunities {
+  overflow: hidden;
+}
+
+.b-advantages-opportunities__slide {
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.04), 0 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+
+  @include for-sm-down {
+    border-radius: 10px;
+  }
+}
+
+.b-advantages-opportunities__slide-header {
+  background: linear-gradient(269.55deg, #44A3DB 36.25%, #007BC3 100.97%);
+  border-radius: 20px;
+  padding: 2.2rem;
+  display: flex;
+  align-items: center;
+  min-height: 10.6rem;
+
+  &.mod-light {
+    background: linear-gradient(101.01deg, #0396FF 8.09%, #25A4FF 51.47%, #7BC8FF 93.43%);
+  }
+
+  @include for-sm-down {
+    border-radius: 10px;
+    padding: 1.6rem;
+    min-height: 7rem;
+  }
+}
+
+.b-advantages-opportunities__slide-img {
+  height: 5.4rem;
+  margin-right: 1.8rem;
+
+  @include for-sm-down {
+    height: 4rem;
+    margin-right: 1.2rem;
+  }
+}
+
+.b-advantages-opportunities__slide-num {
+  font-size: 3.8rem;
+  line-height: 5rem;
+  letter-spacing: 0.015em;
+  margin-right: 3.6rem;
+  color: #fff;
+
+  @include for-sm-down {
+    margin-right: 1.2rem;
+  }
+}
+
+.b-advantages-opportunities__slide-fake-image {
+  width: 5.4rem;
+}
+
+.b-advantages-opportunities__slide-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.015em;
+  color: var(--border-color);
+
+  @include for-sm-down {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+.b-advantages-opportunities__slide-content {
+  padding: 3rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  height: 100%;
+
+  @include for-sm-down {
+    padding: 1.6rem 2.2rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+.b-advantages-opportunities__slide-item {
+  display: flex;
+  & + & {
+    margin-top: 1.6rem;
+  }
+}
+
+.b-advantages-opportunities__slide-item-icon {
+  fill: var(--main-color-business);
+  height: 1.6rem;
+  flex: 0 0 2rem;
+  margin-top: 0.6rem;
+  margin-right: 2rem;
+}
+
+.b-advantages-opportunities__no-image-content {
+  padding-left: 8.6rem;
+}
+
+.b-advantages-opportunities__grid-wrapper {
+  display: grid;
+  grid-gap: 3rem;
+
+  &.mod-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.mod-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.mod-col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include for-bg-down {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  @include for-xs-down {
+    grid-template-columns: 1fr !important;
+  }
+}

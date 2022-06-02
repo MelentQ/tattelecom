@@ -1,0 +1,43 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> common/b-page-banner }}
+
+    {{> common/b-tariffs-list/section }}
+
+    <section class="b-info">
+      <div class="gl__page-content">
+        <h2 class="gl__title">
+          Об услуге
+        </h2>
+
+        <p class="b-info__text">
+          IP телефония это самый современный вид связи, позволяющий совершать звонки через Интернет и экономить на звонках на дальние расстояния.
+        </p>
+      </div>
+    </section>
+
+    <section class="b-info">
+      <div class="gl__page-content">
+        <h2 class="b-info__subtitle">
+          При помощи IP-телефонии «Таттелеком» вы сможете:
+        </h2>
+
+        <ol class="b-info__list-number">
+          {{#each b-ip-telephony-list }}
+            <li class="b-info__item-number">{{ this }}</li>
+          {{/each}}
+        </ol>
+      </div>
+    </section>
+
+    {{!-- {{> common/b-advantages-opportunities }} --}}
+
+    {{> common/b-request-for-connection }}
+
+    {{!-- {{> b-ip-telephony-page/b-codes-for-calls }} --}}
+
+    {{> common/b-support }}
+
+  {{/content}}
+{{/extend}}

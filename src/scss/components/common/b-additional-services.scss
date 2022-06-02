@@ -1,0 +1,162 @@
+.b-additional-services {
+  &__content {
+  }
+
+  &__list {
+    padding-left: 5rem;
+
+    @include for-lg-down {
+      padding-left: 3rem;
+    }
+
+    @include for-sm-down {
+      padding-left: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include for-lg-down {
+      .btn-info__content {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+
+    .b-additional-services__btn-label {
+      margin-right: 0;
+    }
+
+    .b-additional-services__btn {
+      @include for-lg-down {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+    margin-bottom: 2rem;
+
+    &:hover,
+    &:focus {
+      .b-additional-services__btn-label {
+        color: var(--main-color-business);
+      }
+    }
+
+    &.mod-open {
+      .b-additional-services__btn-label {
+        color: var(--main-color-business);
+      }
+
+      .b-additional-services__btn-icon {
+        fill: var(--main-color-business);
+      }
+    }
+
+    @include for-lg-down {
+      width: 100%;
+    }
+  }
+
+  &__btn-label {
+    font-size: var(--fs-h3);
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+  }
+
+  &__btn-icon {
+    margin-right: 1.6rem;
+  }
+
+  &__content-list {
+    padding-left: 6rem;
+    max-width: 92rem;
+
+    @include for-lg-down {
+      padding-left: 4rem;
+    }
+
+    @include for-sm-down {
+      padding-left: 2rem;
+    }
+  }
+
+  &__content-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+
+    font-size: var(--fs-t2);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+
+    & + & {
+      margin-top: 2rem;
+
+      @include for-sm-down {
+        margin-top: 2.6rem;
+      }
+    }
+
+    &.mod-cost {
+      margin-bottom: 2.4rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include for-sm-down {
+      grid-template-columns: 1fr;
+      grid-gap: .6rem;
+    }
+  }
+
+  &__content-item-name-container {
+    display: flex;
+  }
+
+  &__content-item-name {
+    @include for-sm-down {
+      font-weight: 600;
+    }
+  }
+
+  &__content-item-cost {
+    text-align: right;
+
+    @include for-sm-down {
+      text-align: start;
+    }
+  }
+
+  &__btn-info-wrapper {
+    margin-top: .6rem;
+
+    @include for-sm-down {
+      margin-top: .2rem;
+    }
+
+    @include for-xs-down {
+      margin-top: .4rem;
+    }
+  }
+}
