@@ -3910,10 +3910,12 @@ button.swiper-pagination-bullet {
     background-color: #131419;
     background-image: none !important;
     min-height: 49rem;
-    padding-top: 0;
   }
 }
 .rates-preview.mod-main-page .rates-preview__img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -4346,8 +4348,6 @@ button.swiper-pagination-bullet {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -4358,8 +4358,6 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .rates-preview__content {
     max-width: none;
-    padding-left: var(--page-content-padding);
-    padding-right: var(--page-content-padding);
   }
 }
 .rates-preview__content.mod-white-background .rates-preview__content-subtitle {
