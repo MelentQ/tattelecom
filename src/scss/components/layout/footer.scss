@@ -295,8 +295,9 @@
 }
 
 .footer__autor {
-  text-align: right;
+  text-align: left;
   padding-top: 10px;
+  color: #a6a6a6;
 
   @include for-hg-down {
     display: block;
