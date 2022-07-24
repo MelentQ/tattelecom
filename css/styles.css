@@ -8993,8 +8993,9 @@ a.header__b-popup-caption-list:hover {
 }
 
 .footer__autor {
-  text-align: right;
+  text-align: left;
   padding-top: 10px;
+  color: #a6a6a6;
 }
 @media screen and (max-width: 1199px) {
   .footer__autor {
