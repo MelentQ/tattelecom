@@ -1,5 +1,6 @@
 .info-drop-menu {
-  margin: 5rem 0 8rem;
+  padding-top: 40px;
+  background: var(--border-color);
 
   @include for-sm-down {
     margin: 2.6rem 0 4rem;
@@ -17,8 +18,9 @@
 .info-drop-menu__title {
   display: flex;
   align-items: center;
-  font-size: 3.8rem;
-  line-height: 5rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   letter-spacing: 0.015em;
   padding-bottom: 3rem;
   text-align: start;
