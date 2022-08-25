@@ -18,6 +18,7 @@
     btnElem.classList.remove('mod-open');
     menuContainerElem.classList.remove('mod-open');
     menuContainerElem.style.maxHeight = 0;
+    menuContainerElem.style.overflow = 'hidden';
 
     if (contentBtnHide && contentBtnOpen) {
       contentBtnHide.classList.add('mod-show');
@@ -30,6 +31,7 @@
     menuContainerElem.classList.add('mod-open');
     const heightContent = menuElem.clientHeight;
     menuContainerElem.style.maxHeight = `${ heightContent }px`;
+    menuContainerElem.style.overflow = 'visible';
 
     if (contentBtnHide && contentBtnOpen) {
       contentBtnHide.classList.remove('mod-show');
