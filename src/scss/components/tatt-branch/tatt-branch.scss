@@ -44,12 +44,10 @@
     &__hero-img {
         display: block;
         width: 52rem;
-        height: 36.4rem;
         object-fit: cover;
 
         @include for-md-down {
             width: 40rem;
-            height: 27.4rem;
             margin-bottom: 2.4rem;
         }
 
