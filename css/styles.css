@@ -21398,14 +21398,12 @@ a.header__b-popup-caption-list:hover {
 .tatt-branch__hero-img {
   display: block;
   width: 52rem;
-  height: 36.4rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (max-width: 959px) {
   .tatt-branch__hero-img {
     width: 40rem;
-    height: 27.4rem;
     margin-bottom: 2.4rem;
   }
 }
