@@ -6947,7 +6947,6 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.015em;
   padding-bottom: 3rem;
   text-align: start;
-  white-space: nowrap;
 }
 @media screen and (max-width: 767px) {
   .info-drop-menu__title {
