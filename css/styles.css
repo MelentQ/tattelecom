@@ -3907,7 +3907,6 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .rates-preview.mod-main-page {
-    background-color: #131419;
     background-image: none !important;
     min-height: 49rem;
     padding-top: 0;
@@ -4360,6 +4359,7 @@ button.swiper-pagination-bullet {
     max-width: none;
     padding-left: var(--page-content-padding);
     padding-right: var(--page-content-padding);
+    color: black;
   }
 }
 .rates-preview__content.mod-white-background .rates-preview__content-subtitle {
