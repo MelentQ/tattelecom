@@ -55,7 +55,6 @@ $padding-content: 2rem;
     display: block;
 
     @include for-sm-down {
-      background-color: #131419;
       background-image: none !important;
       min-height: 49rem;
       padding-top: 0;
@@ -504,6 +503,7 @@ $padding-content: 2rem;
     max-width: none;
     padding-left: var(--page-content-padding);
     padding-right: var(--page-content-padding);
+    color: black;
   }
 
   &.mod-white-background {
