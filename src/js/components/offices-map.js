@@ -88,6 +88,7 @@ export class OfficesMap {
 
     if (this.checkboxPartner) {
       this.checkboxPartner.onchange = () => {
+        console.log('checkboxPartner')
         // очисить всю коллекцию меток
         this.myMap.geoObjects.removeAll();
 
@@ -102,10 +103,16 @@ export class OfficesMap {
             if (!officeItem.isPartner) {
               officeItem.elem.classList.add('mod-hide-no-partner');
             }
+            else{
+              officeItem.elem.classList.remove('mod-hide-partner');
+            }
           })
           this.showNotFound(!this.filteredForPartnerArr.length);
         } else {
           this.officesArr.forEach(officeItem => {
+            if (officeItem.isPartner) {
+              officeItem.elem.classList.add('mod-hide-partner');
+            }
             officeItem.elem.classList.remove('mod-hide-no-partner');
           })
 
