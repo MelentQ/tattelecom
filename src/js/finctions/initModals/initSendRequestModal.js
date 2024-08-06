@@ -26,6 +26,7 @@ export default function initSendRequestModal() {
   const dataCommentElem = modalElem.querySelector('input[name=param_comment]');
   const modalPriceWrapperElem = modalElem.querySelector('.send-request__price');
   const modalPriceElem = modalElem.querySelector('.send-request__price .number');
+  const modalTariffingElem = modalElem.querySelector('.send-request__price .tariffing');
 
   const modalProductWrapperElem = modalElem.querySelector('.send-request__product-wrapper');
   const modalProductImgElem = modalProductWrapperElem.querySelector('.send-request__product-img');
@@ -43,6 +44,7 @@ export default function initSendRequestModal() {
       const dataTitle = btn.getAttribute('data-tariff-name');
       const dataCommnt = btn.getAttribute('data-comment');
       const dataPrise = btn.getAttribute('data-prise');
+      const dataTariffing = btn.getAttribute('data-tariffing');
 
       const dataProductImg = btn.getAttribute('data-product-img');
       const dataProductCaption = btn.getAttribute('data-product-caption');
@@ -57,6 +59,9 @@ export default function initSendRequestModal() {
         modalPriceElem.innerText = dataPrise;
       } else {
         modalPriceWrapperElem.remove();
+      }
+      if (dataTariffing) {
+        modalTariffingElem.innerText = dataTariffing;
       }
 
 
