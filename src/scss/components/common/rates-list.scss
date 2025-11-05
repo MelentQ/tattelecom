@@ -65,6 +65,22 @@
   position: relative;
   color: #fff;
 
+  .rates-list__slide-hit-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rates-list__slide-hit-mark {
+    position: absolute;
+    top: 0;
+    right: 2.4rem;
+    height: 3.8rem;
+  }
+
   .rates-list__slide-btn-plug {
     background-color: #fff;
     color: var(--main-color);
