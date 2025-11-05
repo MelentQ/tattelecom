@@ -60,6 +60,22 @@
   }
 }
 
+.rates-list__slide-promo {
+  background-color: #0078E6;
+  position: relative;
+  color: #fff;
+
+  .rates-list__slide-btn-plug {
+    background-color: #fff;
+    color: var(--main-color);
+
+    &:hover {
+      background-color: var(--main-color-hover);
+      color: #fff;
+    }
+  }
+}
+
 .rates-list__slide-up {
   padding-bottom: 1.8rem;
 }
