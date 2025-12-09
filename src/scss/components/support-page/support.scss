@@ -10,12 +10,10 @@
   font-size: 2rem;
   line-height: 3.2rem;
   letter-spacing: 0.015em;
-  margin-bottom: 6.4rem;
 
   @include for-sm-down {
     font-size: 2.6rem;
     line-height: 3.4rem;
-    margin-bottom: 3rem;
   }
 }
 
