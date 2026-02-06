@@ -122,6 +122,23 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-gap: 2rem
   }
+
+  li{
+    position: relative;
+  }
+}
+
+.rates-list__slide-viju-container{
+  position: absolute;
+  top: -2rem;
+  right: -1.5rem;
+  z-index: 2;
+  background: #41c7bd;
+  padding: .6rem 1rem;
+  border-radius: 1rem;
+}
+.rates-list__slide-viju-mark{
+  height: 3rem;
 }
 
 .rates-list-internet__item {
@@ -154,6 +171,10 @@
     .rates-list__slide-old-price {
       color: #FFCAB7;
     }
+  }
+
+  &.mod-viju {
+    box-shadow: 0 0 5px 5px #41c7bd;
   }
 }
 
