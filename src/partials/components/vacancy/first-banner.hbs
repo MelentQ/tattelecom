@@ -1,0 +1,66 @@
+{{!--
+  Блок первого баннера (вакансия)
+  Пример данных:
+  "firstBanner": {
+    "logo": "img/common/first-banner/logo-letai.svg",
+    "title": "Технический специалист",
+    "features": [
+      "Официальное трудоустройство",
+      "Сменный график"
+    ],
+    "buttonText": "Откликнуться",
+    "buttonLink": "#",
+    "backgroundImage": "img/common/first-banner/background.png",
+    "personImage": "img/common/first-banner/person.png"
+  }
+--}}
+
+<section class="first-banner gl__section">
+  <div class="gl__page-content">
+    <div class="first-banner__content">
+      <div class="first-banner__left">
+        <img
+          class="first-banner__logo"
+          src="{{#if firstBanner.logo}}{{ firstBanner.logo }}{{else}}img/common/first-banner/logo-letai.svg{{/if}}"
+          alt="Летай"
+        >
+
+        <h1 class="first-banner__title">
+          {{#if firstBanner.title}}{{ firstBanner.title }}{{else}}Технический специалист{{/if}}
+        </h1>
+
+        <ul class="first-banner__features">
+          {{#if firstBanner.features}}
+            {{#each firstBanner.features}}
+              <li class="first-banner__feature">{{ this }}</li>
+            {{/each}}
+          {{else}}
+            <li class="first-banner__feature">Официальное трудоустройство</li>
+            <li class="first-banner__feature">Сменный график</li>
+          {{/if}}
+        </ul>
+
+        <a
+          class="first-banner__btn gl__main-btn mod-white"
+          href="{{#if firstBanner.buttonLink}}{{ firstBanner.buttonLink }}{{else}}#{{/if }}"
+        >
+          {{#if firstBanner.buttonText}}{{ firstBanner.buttonText }}{{else}}Откликнуться{{/if}}
+          <span class="first-banner__btn-arrow" aria-hidden="true">↘</span>
+        </a>
+      </div>
+
+      <div class="first-banner__right">
+        <img
+          class="first-banner__background"
+          src="{{#if firstBanner.backgroundImage}}{{ firstBanner.backgroundImage }}{{else}}img/common/first-banner/background.png{{/if}}"
+          alt=""
+        >
+        <img
+          class="first-banner__person"
+          src="{{#if firstBanner.personImage}}{{ firstBanner.personImage }}{{else}}img/common/first-banner/person.png{{/if}}"
+          alt="Технический специалист"
+        >
+      </div>
+    </div>
+  </div>
+</section>

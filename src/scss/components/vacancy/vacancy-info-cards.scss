@@ -1,0 +1,72 @@
+.vacancy-info-cards {
+  padding-top: 3.2rem;
+}
+
+.vacancy-info-cards__list {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.vacancy-info-cards__card {
+  background: #f2f2f2;
+  border-radius: 2.4rem;
+  padding: 3.2rem 3.6rem;
+}
+
+.vacancy-info-cards__title {
+  margin: 0 0 2.4rem;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: #fa7007;
+}
+
+.vacancy-info-cards__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.6rem;
+  color: #1f1f1f;
+  font-size: 1.6rem;
+  line-height: 1.35;
+}
+
+.vacancy-info-cards__item {
+  position: relative;
+  padding-left: 2.0rem;
+}
+
+.vacancy-info-cards__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #1f1f1f;
+  opacity: 0.9;
+}
+
+.vacancy-info-cards__item b,
+.vacancy-info-cards__item strong {
+  font-weight: 700;
+}
+
+@include for-sm-down {
+  .vacancy-info-cards__card {
+    padding: 2.4rem 2.0rem;
+    border-radius: 2.0rem;
+  }
+
+  .vacancy-info-cards__title {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .vacancy-info-cards__items {
+    gap: 1.2rem;
+  }
+}
+

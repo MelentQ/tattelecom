@@ -1,0 +1,12 @@
+{{#extend "layout"}}
+  {{#content "main"}}
+
+    {{> vacancy/first-banner firstBanner=firstBanner }}
+
+    {{> vacancy/vacancy-info-cards vacancyInfoCards=vacancyInfoCards }}
+
+    {{> vacancy/vacancy-response-form vacancyResponseForm=vacancyResponseForm vacancyCitySelect=vacancyCitySelect }}
+
+  {{/content}}
+{{/extend}}
+

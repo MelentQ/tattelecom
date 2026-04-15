@@ -1,0 +1,25 @@
+{{!--
+  Информационные карточки на странице вакансии
+  Данные:
+  "vacancyInfoCards": [
+    { "title": "...", "items": ["...", "..."] }
+  ]
+--}}
+
+<section class="vacancy-info-cards gl__section">
+  <div class="gl__page-content">
+    <div class="vacancy-info-cards__list">
+      {{#each vacancyInfoCards}}
+        <article class="vacancy-info-cards__card">
+          <h2 class="vacancy-info-cards__title">{{ this.title }}</h2>
+          <ul class="vacancy-info-cards__items">
+            {{#each this.items}}
+              <li class="vacancy-info-cards__item">{{{ this }}}</li>
+            {{/each}}
+          </ul>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>
+

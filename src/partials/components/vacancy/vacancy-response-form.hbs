@@ -1,0 +1,104 @@
+{{!--
+  Последний блок страницы вакансии: форма отклика
+  Данные:
+  "vacancyResponseForm": {
+    "title": "Оставьте отклик",
+    "subtitle": "Здесь Вы можете оставить свои контакты для связи",
+    "buttonText": "Откликнуться",
+    "policyText": "Я принимаю условия политики ПАО \"Таттелеком\" и даю согласие субъекта на обработку персональных данных"
+  }
+
+  "vacancyCitySelect": [
+    {
+      "name": "vacancy-city",
+      "placeholder": "Выберите город",
+      "required": true,
+      "options": ["Казань", "Набережные Челны"]
+    }
+  ]
+--}}
+
+<section class="vacancy-response-form gl__section">
+  <div class="gl__page-content">
+    <div class="vacancy-response-form__content">
+      <h2 class="vacancy-response-form__title">
+        {{#if vacancyResponseForm.title}}{{ vacancyResponseForm.title }}{{else}}Оставьте отклик{{/if}}
+      </h2>
+      <p class="vacancy-response-form__subtitle">
+        {{#if vacancyResponseForm.subtitle}}{{ vacancyResponseForm.subtitle }}{{else}}Здесь Вы можете оставить свои контакты для связи{{/if}}
+      </p>
+
+      <div class="vacancy-response-form__card">
+        <form class="vacancy-response-form__form" data-need-validation data-parsley-validate data-parsley-focus="none">
+          <div class="vacancy-response-form__field">
+            {{> common/controls/select selects=vacancyCitySelect }}
+          </div>
+
+          <div class="vacancy-response-form__field">
+            {{> common/controls/input-main
+              required=true
+              type="text"
+              placeholder="Имя"
+              name="vacancy-name"
+              minLength=2
+            }}
+          </div>
+
+          <div class="vacancy-response-form__field">
+            {{> common/controls/input-main
+              required=true
+              type="text"
+              placeholder="Фамилия"
+              name="vacancy-surname"
+              minLength=2
+            }}
+          </div>
+
+          <div class="vacancy-response-form__field">
+            {{> common/controls/input-main
+              required=true
+              type="tel"
+              phoneMask=true
+              placeholder="+7 (___) ___-__-__"
+              name="vacancy-phone"
+            }}
+          </div>
+
+          <div class="vacancy-response-form__field">
+            {{> common/controls/input-main
+              required=true
+              type="text"
+              placeholder="Дата рождения"
+              name="vacancy-birthdate"
+            }}
+          </div>
+
+          <div class="vacancy-response-form__checkbox">
+            {{#if vacancyResponseForm.policyText}}
+              {{> common/controls/input-checkbox
+                required=true
+                name="vacancy-policy"
+                captionBlack=true
+                caption=vacancyResponseForm.policyText
+              }}
+            {{else}}
+              {{> common/controls/input-checkbox
+                required=true
+                name="vacancy-policy"
+                captionBlack=true
+                caption="Я принимаю условия политики ПАО \"Таттелеком\" и даю согласие субъекта на обработку персональных данных"
+              }}
+            {{/if}}
+          </div>
+
+          <div class="vacancy-response-form__actions">
+            <button type="submit" class="vacancy-response-form__btn gl__main-btn">
+              {{#if vacancyResponseForm.buttonText}}{{ vacancyResponseForm.buttonText }}{{else}}Откликнуться{{/if}}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
