@@ -6,6 +6,7 @@ import initCallbackModal from './finctions/initModals/initCallbackModal';
 import validation from './finctions/validation';
 import initSelects from './finctions/initSelects';
 import phoneMask from './finctions/masks/phoneMask';
+import dateMask from "./finctions/masks/dateMask";
 
 document.addEventListener('DOMContentLoaded', () => {
   new Header();
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   validation();
   initSelects();
   phoneMask();
+  dateMask();
 });
