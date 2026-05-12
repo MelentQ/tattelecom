@@ -16,6 +16,10 @@
 // __если есть селект пункт выдачи__
 // data-point-issue
 
+// __Potok (скрытые поля формы .js-potok-form)__
+// data-potok-id
+// data-potok-type
+
 import { Modal } from '../../components/modal';
 
 export default function initSendRequestModal() {
@@ -36,6 +40,10 @@ export default function initSendRequestModal() {
 
   const modalPointIssueSelectElem = modalElem.querySelector('.send-request__form-select-wrapper');
 
+  const potokFormElem = modalElem.querySelector('.js-potok-form');
+  const potokIdInputElem = potokFormElem?.querySelector('input[name="potokId"]');
+  const potokTypeInputElem = potokFormElem?.querySelector('input[name="potokType"]');
+
   let modalComponent;
 
   btnsOpen.forEach(btn => {
@@ -51,6 +59,16 @@ export default function initSendRequestModal() {
       const dataProductValue = btn.getAttribute('data-product-value');
       const dataProductPrice = btn.getAttribute('data-product-price');
       const dataPointIssue = btn.hasAttribute('data-point-issue');
+
+      const dataPotokId = btn.getAttribute('data-potok-id');
+      const dataPotokType = btn.getAttribute('data-potok-type');
+
+      if (potokIdInputElem) {
+        potokIdInputElem.value = dataPotokId != null && dataPotokId !== '' ? dataPotokId : '';
+      }
+      if (potokTypeInputElem) {
+        potokTypeInputElem.value = dataPotokType != null && dataPotokType !== '' ? dataPotokType : '';
+      }
 
       dataTitleElem.innerText = dataTitle;
       dataCommentElem.value = "";
