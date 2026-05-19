@@ -41,8 +41,7 @@ export default function initSendRequestModal() {
   const modalPointIssueSelectElem = modalElem.querySelector('.send-request__form-select-wrapper');
 
   const potokFormElem = modalElem.querySelector('.js-potok-form');
-  const potokIdInputElem = potokFormElem?.querySelector('input[name="potokId"]');
-  const potokTypeInputElem = potokFormElem?.querySelector('input[name="potokType"]');
+  const rateIdInputElem = potokFormElem?.querySelector('input[name="rateId"]');
 
   let modalComponent;
 
@@ -60,14 +59,9 @@ export default function initSendRequestModal() {
       const dataProductPrice = btn.getAttribute('data-product-price');
       const dataPointIssue = btn.hasAttribute('data-point-issue');
 
-      const dataPotokId = btn.getAttribute('data-potok-id');
-      const dataPotokType = btn.getAttribute('data-potok-type');
-
-      if (potokIdInputElem) {
-        potokIdInputElem.value = dataPotokId != null && dataPotokId !== '' ? dataPotokId : '';
-      }
-      if (potokTypeInputElem) {
-        potokTypeInputElem.value = dataPotokType != null && dataPotokType !== '' ? dataPotokType : '';
+      const dataRateId = btn.getAttribute('data-id');
+      if (rateIdInputElem) {
+        rateIdInputElem.value = dataRateId != null && dataRateId !== '' ? dataRateId : '';
       }
 
       dataTitleElem.innerText = dataTitle;
